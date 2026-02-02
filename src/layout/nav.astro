@@ -1,0 +1,72 @@
+---
+import "../assets/styles/global.css";
+import HEAD from "../layout/head.astro";
+---
+
+<header class="header-nav">
+    <HEAD />
+
+    <div class="container-nav position-style">
+        <nav class="menu-nav position-style">
+            <picture class="picture-head">
+                <source
+                    srcset='https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Logo-TAH-ENG-1.png?fit=157%2C95&ssl=1"'
+                    media="(width >= 600px)"
+                />
+                <img
+                    src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Logo-TAH-ENG-1.png?fit=157%2C95&ssl=1"
+                />
+            </picture>
+
+            <div>
+                <ul class="items-nav">
+                    <li class="items">HOTEL</li>
+                    <li class="items">HABITACIONES</li>
+                    <li class="items">RESTAURANTES</li>
+                    <li class="items">MASAJE</li>
+                    <li class="items">GALERIA</li>
+                    <li class="items">CONTACTO</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .header-nav {
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+
+    .container-nav{
+        width: 100%;
+        border-top: 1px solid var(--secondary-color);
+    }
+
+    .menu-nav {
+        width: 1200px;
+        justify-content: space-between;
+        padding: 12px 0 12px 0;
+    }
+
+    .menu-items {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+    }
+    .items {
+        font-weight: 700;
+        color: white;
+        font-size: 15px;
+    }
+
+    .items:hover {
+        color: #fa8e00;
+        transition: all 0.4s;
+        cursor: pointer;
+    }
+</style>
