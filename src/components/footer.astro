@@ -8,36 +8,32 @@
     </div>
 
     <div>
-        <span>Contacto</span>
-        <ul>
-            <li>Calle Union 184, Cusco</li>
-            <li>ventas@TerraAndinaHotel.com</li>
-            <li>+51 987 945 817</li>
-            <li>Hotel Contact</li>
-            <li>51-84 772950</li>
-            <li>51-84 249413</li>
+        <span class="title-footer" >Contacto</span>
+        <ul class="lista-elementos">
+            <li><i class="bi bi-geo-alt-fill"></i>Calle Union 184, Cusco</li>
+            <li><i class="bi bi-envelope-at"></i>ventas@TerraAndinaHotel.com</li>
+            <li><i class="bi bi-telephone-fill"></i>+51 987 945 817</li>
+            <li><i class="bi bi-telephone-fill"></i>51-84 772950</li>
+            <li><i class="bi bi-telephone-fill"></i>51-84 249413</li>
         </ul>
     </div>
 
      <div>
-        <span>Pages</span>
-        <ul>
+        <span  class="title-footer" >Pages</span>
+        <ul class="lista-elementos">
           
-            <li>Hotel</li>
-            <li>Habitaciones</li>
-            <li>Restaurantes</li>
-            <li>Masajes</li>
-            <li>Galeria</li>
-            <li>Contactos</li>
+            <li><i class="bi bi-link-45deg"></i>Hotel</li>
+            <li><i class="bi bi-link-45deg"></i>Habitaciones</li>
+            <li><i class="bi bi-link-45deg"></i>Restaurantes</li>
+            <li><i class="bi bi-link-45deg"></i>Masajes</li>
+            <li><i class="bi bi-link-45deg"></i>Galeria</li>
+            <li><i class="bi bi-link-45deg"></i>Contactos</li>
         </ul>
     </div>
 
      <div>
-        <span>Payment Options</span>
-        
-
-
-        <span>Comparte tus Comentarios</span>
+        <span  class="title-footer" >Payment Options</span>
+        <span  class="title-footer" >Comparte tus Comentarios</span>
     </div>
 
 </footer>
@@ -48,8 +44,35 @@
         justify-content: center;
         align-items: center;
     }
+
+
+    .icon-footer{
+        color: var(--primary-color);
+    }
+
+    .title-footer{
+        padding: 0 20px 2px 20px;
+        font-weight: 500;
+        font-family: var(--font-family-primary);
+        font-size: 21px;
+        color: var(--text-color-gray);
+        border-bottom: 1px solid var(--border-color);
+    }
+
     .logo{
         width: 120px;
+    }
+
+    .lista-elementos{
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .lista-elementos li{
+        display: flex;
+        gap:10px;
     }
 
 </style>
