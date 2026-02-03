@@ -4,7 +4,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import MasajeConsejo from "../components/Masages/MasajeConsejo.astro";
 import fondoImagen from "../assets/backgrounds/Salon-masajes-2.webp";
 import Fondos from "../components/fondos.astro";
-import MasajesPasos from "../components/Masages/masajepasos.astro"
+import MasajesPasos from "../components/Masages/masajepasos.astro";
+import MasajePrecio from "../components/Masages/precios.astro";
+import OpenMassages from "../components/Masages/OpenMassages.astro";
 ---
 
 <BaseLayout title="Masaje - Terra Andina Colonial Mansion">
@@ -12,5 +14,8 @@ import MasajesPasos from "../components/Masages/masajepasos.astro"
     <main>
        <MasajeConsejo />
        <MasajesPasos />
+       <MasajePrecio />
+       <OpenMassages />
+
     </main>
 </BaseLayout>
