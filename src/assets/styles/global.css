@@ -4,10 +4,12 @@
     --border-color: #e95454;
     --text-color-primary: white;
     --text-color-gray: #303030;
+    --text-color-lista: #54595f;
     --font-family-primary: 'Roboto', serif;
     --font-family-secondary: "Vollkorn", serif;
-    --font-family-tercer: "Great Vibes", cursive;
+    --font-family-tercer: 'Alex Brush', curisve;
 }
+
 
 
 * {
@@ -24,8 +26,8 @@
     margin-bottom: 10px;
 }
 
-.container{
-    margin-top: 50px ;
+.container {
+    margin-top: 50px;
 }
 
 

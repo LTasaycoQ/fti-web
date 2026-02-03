@@ -2,6 +2,9 @@
 import "../assets/styles/global.css";
 import Links from "../utils/links.astro";
 const { title } = Astro.props;
+import Nav from "../components/Nav.astro";
+import HeaderTop from "../components/HeaderTop.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!DOCTYPE html>
@@ -13,6 +16,9 @@ const { title } = Astro.props;
     <Links />
   </head>
   <body>
+    <HeaderTop />
+    <Nav />
     <slot />
+    <Footer />
   </body>
 </html>

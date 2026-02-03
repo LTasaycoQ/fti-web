@@ -1,9 +1,10 @@
 ---
-import Prueba from "./card.astro"; // tu componente de cards
+import Prueba from "./card.astro";
+import "../assets/styles/global.css"
 ---
 
 <section class="rooms container">
-  <h2 class="rooms__title">Nuestras habitaciones y suites</h2>
+  <h2 class="title rooms__title">NUESTRAS HABITACIONES Y SUITES</h2>
   <p class="rooms__desc">Selecciona tu alojamiento. Nosotros nos encargamos del resto.</p>
 
   <Prueba />
@@ -11,14 +12,16 @@ import Prueba from "./card.astro"; // tu componente de cards
 
 <style>
 .rooms {
+  margin-top: 150px;
   text-align: center;
 }
-.rooms__title {
+.rooms__title{
   font-size: 32px;
 }
+
 .rooms__desc {
   margin-bottom: 40px;
   color: #777;
+  font-size: 20px;
 }
 </style>
-s

@@ -1,24 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Nav from "../components/Nav.astro";
-import HeaderTop from "../components/HeaderTop.astro";
 import Rooms from "../components/Rooms.astro";
-import Footer from "../components/Footer.astro";
+
 import Fondos from "../components/fondos.astro";
 import HistoricCenter from "../components/HistoricCenter.astro";
 import AndeandLand from "../components/AndeanLand.astro";
 import "../assets/styles/global.css";
+
+
+import fondoImagen from "../assets/fondos/baner-terra.webp"; 
 ---
 
 <BaseLayout title="Inicio - Terra Andina Colonial Mansion">
-	<HeaderTop />
-	<Nav />
-	<Fondos />
-	<main class="home">
-		<HistoricCenter />
-		<AndeandLand />
-		<Rooms />
-	</main>
-
-	<Footer />
+    <Fondos imgFondo={`url(${fondoImagen.src})`} />
+    
+    <main class="home">
+        <HistoricCenter />
+        <AndeandLand />
+        <Rooms />
+    </main>
 </BaseLayout>

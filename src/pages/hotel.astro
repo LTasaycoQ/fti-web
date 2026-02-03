@@ -1,14 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Footer from "../components/Footer.astro";
-import HeaderTop from "../components/HeaderTop.astro";
-import Nav from "../components/Nav.astro";
+import Fondos from "../components/fondos.astro";
+import HotelStay from "../components/HotelStay.astro";
+
+import fondoImagen from "../assets/fondos/fachada.webp";
 ---
 
 <BaseLayout title="Hoteles">
-    <HeaderTop />
-    <Nav />
-    <main class="home"></main>
+    <Fondos imgFondo={`url(${fondoImagen.src})`} />
+    <main class="home">
+        <HotelStay />
+    </main>
 
-    <Footer />
 </BaseLayout>
