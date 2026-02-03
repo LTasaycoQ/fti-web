@@ -1,183 +1,24 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import HeaderTop from "../components/HeaderTop.astro";
+import Rooms from "../components/Rooms.astro";
+import Footer from "../components/Footer.astro";
+import Fondos from "../components/fondos.astro";
+import HistoricCenter from "../components/HistoricCenter.astro";
+import AndeandLand from "../components/AndeanLand.astro";
 import "../assets/styles/global.css";
-import Nav from "../layout/nav.astro";
-import Fondo from "../components/fondos.astro";
-import SeccionImagen from "../components/sectionImagen.astro";
-import Links from "../utils/links.astro";
-import Prueba from "../components/card.astro";
-import Servicios from "../components/services.astro";
-import Footer from "../components/footer.astro";
-
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>inicio - Terra Andina Colonial Mansion</title>
-		<Links />
-	</head>
-	<body>
-		<Nav />
-		<Fondo />
+<BaseLayout title="Inicio - Terra Andina Colonial Mansion">
+	<HeaderTop />
+	<Nav />
+	<Fondos />
+	<main class="home">
+		<HistoricCenter />
+		<AndeandLand />
+		<Rooms />
+	</main>
 
-		<main>
-			<section class="section-img-casona-colonial">
-				<h1 class="title">
-					UNA CASONA COLONIAL <br /> EN EL CENTRO HISTÓRICO DE CUSCO
-				</h1>
-				<SeccionImagen />
-			</section>
-
-			<section class="section-img-casona-colonial container-web">
-				<div>
-					<p class="text-p">
-						UNA ESTADIA EN EL HOTEL TERRA ANDINA TE SITÚA EN EL
-						CORAZÓN DE CUSCO.
-					</p>
-
-					<a href="#" class="items-nav button-redireccion">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							fill="currentColor"
-							class="bi bi-arrow-right"
-							viewBox="0 0 16 16"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-							></path>
-						</svg>
-						ABOUT US
-					</a>
-				</div>
-				<div>
-					<h1 class="title">
-						TERRA ANDINA <br />MANSION COLONIAL
-					</h1>
-					<p class="text-parrafo">
-						Una mansión colonial en el distrito histórico de la
-						antigua capital del Imperio Inca, Cusco, Perú. Terra
-						Andina es un hotel de primera clase ubicado a media
-						cuadra de la encantadora Plaza San Pedro, el Mercado de
-						San Pedro, diseñado por Eiffel, la Iglesia de San Pedro
-						y a solo cuatro cuadras de la Plaza de Armas.
-					</p>
- 
-					<u class="items-nav items-nav-feature">
-						<li><svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							fill="currentColor"
-							class="bi bi-check-circle-fill"
-							viewBox="0 0 16 16"
-						>
-							<path
-								d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-							></path>
-						</svg>Es el punto de partida perfecto para hacer de su
-						visita a Cusco y Machu Picchu una experiencia
-						inolvidable.</li>
-
-						<li><svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							fill="currentColor"
-							class="bi bi-check-circle-fill"
-							viewBox="0 0 16 16"
-						>
-							<path
-								d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-							></path>
-						</svg>Nuestro personal amable y profesional le espera
-						para garantizarle una estancia agradable. Patio colonial</li>
-					</ul>
-					
-
-					
-				</div>
-
-				<div>
-					<div class="">
-						<picture>
-							<img
-								class="container-styleImagen"
-								src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/pasadizo-vert.jpg?resize=300%2C300&ssl=1"
-								alt=""
-							/>
-						</picture>
-					</div>
-				</div>
-			</section>
-
-			<section class="section-img-casona-colonial container-web">
-				
-				<div class="container-habitations">
-					<h1 class="title">
-						NUESTRAS HABITACIONES Y SUITES
-					</h1>
-					<p class="text-servicios">
-						Selecciona tu alojamiento. Nosotros nos encargamos del resto.
-					</p>
-					<Prueba />
-				</div>
-			</section>
-
-
-			<Servicios />
-			<Footer />
-
-		</main>
-	</body>
-</html>
-
-<style>
-	.section-img-casona-colonial {
-		margin-top: 80px;
-	}
-	
-.items-nav-feature{
-	display: flex;
-	flex-direction: column;
-}
-	.button-redireccion {
-		background-color: #d8a614;
-		width: max-content;
-		gap: 15px;
-		padding: 15px;
-		border-radius: 5px;
-		font-weight: bolder;
-	}
-	.text-parrafo {
-		color:black;
-		font-size: 18px;
-		width: 600px;
-		
-		font-family: var(--font-family-primary);
-	}
-
-	.text-servicios{
-		margin-bottom: 50px;
-		font-size: 20px;
-		color: var(--text-color-gray);
-	}
-	.container-web {
-		display: flex;
-		justify-content: center;
-		font-family: var(--font-family-primary);
-		gap: 35px;
-	}
-	.bi-check-circle-fill{
-		color: #961C1C;
-	}
-	.container-habitations{
-		text-align: center;
-	}
-
-	
-</style>
+	<Footer />
+</BaseLayout>

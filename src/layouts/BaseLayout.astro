@@ -1,0 +1,18 @@
+---
+import "../assets/styles/global.css";
+import Links from "../utils/links.astro";
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <Links />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

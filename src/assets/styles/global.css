@@ -3,7 +3,7 @@
     --secondary-color: #5d2727;
     --border-color: #e95454;
     --text-color-primary: white;
-    --text-color-gray: #54595f;
+    --text-color-gray: #303030;
     --font-family-primary: 'Roboto', serif;
     --font-family-secondary: "Vollkorn", serif;
     --font-family-tercer: "Great Vibes", cursive;
@@ -15,6 +15,18 @@
     font-family: var(--font-family-primary);
 }
 
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: var(--font-family-secondary);
+    color: var(--text-color-gray);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.container{
+    margin-top: 50px ;
+}
 
 
 .position-style {
@@ -29,7 +41,7 @@
     list-style: none;
     text-decoration: none;
     gap: 20px;
-    margin-top:14px;
+    margin-top: 14px;
     color: var(--text-color-primary);
 }
 
@@ -40,17 +52,10 @@
     box-shadow: 6px 8px 15px 0px #828282;
 }
 
-.text-p,
-	.title {
-		font-family: var(--font-family-secondary);
-		font-size: 2.5rem;
-		text-align: center;
-		color: #2c3133;
-		font-weight: 400;
-		margin-bottom: 50px;
-	}
-	.text-p {
-		width: 260px;
-		text-align: start;
-		font-size: 30px;
-	}
+
+
+.text-p {
+    width: 260px;
+    text-align: start;
+    font-size: 30px;
+}
