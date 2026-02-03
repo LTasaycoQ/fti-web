@@ -21,7 +21,6 @@
 .title {
     text-align: center;
     font-family: var(--font-family-secondary);
-    color: var(--text-color-gray);
     font-weight: 500;
     margin-bottom: 10px;
 }
