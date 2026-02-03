@@ -2,8 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Fondos from "../components/fondos.astro"
 
+import RestauranteInicio from "../components/RestaurantInicio.astro"
+import GastronomicExperience from "../components/GastronomicExperience.astro"
 
-import fondoImagen from "../assets/fondos/interra-intro.webp"
+import fondoImagen from "../assets/backgrounds/interra-intro.webp"
 ---
 
 <BaseLayout title="Restaurante - Terra Andina Colonial Mansion">
@@ -11,6 +13,8 @@ import fondoImagen from "../assets/fondos/interra-intro.webp"
     <Fondos imgFondo={`url(${fondoImagen.src})`} />
     <main>
 
+        <RestauranteInicio />
+        <GastronomicExperience />
     </main>
 
 </BaseLayout>

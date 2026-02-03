@@ -1,0 +1,70 @@
+---
+import "../assets/styles/global.css";
+import SVG_SPAN from "../utils/svg-spa.astro";
+---
+
+<div class="container container__pasos">
+    <div class="container-pasos--feature">
+        <div class="container-card">
+            <div class="pasos_seccion">
+                <SVG_SPAN />
+                <h2>Masaje sueco restaurador</h2>
+                <p>
+                    Disfrute del masaje qeu ayuda a aumentar el flujo de oxigeno
+                    en la sangre y mejora la circulacion
+                </p>
+            </div><div class="pasos_seccion">
+                <SVG_SPAN />
+                <h2>Masaje sueco restaurador</h2>
+                <p>
+                    Disfrute del masaje qeu ayuda a aumentar el flujo de oxigeno
+                    en la sangre y mejora la circulacion
+                </p>
+            </div>
+        </div>
+        <div class="container-card">
+            <div class="pasos_seccion">
+                <SVG_SPAN />
+                <h2>Masaje sueco restaurador</h2>
+                <p>
+                    Disfrute del masaje qeu ayuda a aumentar el flujo de oxigeno
+                    en la sangre y mejora la circulacion
+                </p>
+            </div><div class="pasos_seccion">
+                <SVG_SPAN />
+                <h2>Masaje sueco restaurador</h2>
+                <p>
+                    Disfrute del masaje qeu ayuda a aumentar el flujo de oxigeno
+                    en la sangre y mejora la circulacion
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .container__pasos {
+        width: 100%;
+        display: flex;
+    }
+    .container-pasos--feature {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .pasos_seccion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        width: 28%;
+    }
+</style>

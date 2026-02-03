@@ -1,0 +1,65 @@
+---
+import "../assets/styles/global.css";
+---
+
+<section class="container resturant__container--feature">
+        <div>
+            <img
+                src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Interra-intro1.jpg?w=350&ssl=1"
+                alt=""
+            />
+        </div>
+        <div class="resturant__container-parrafo">
+            <img
+                src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Logo-Interra.jpg?w=305&ssl=1"
+                alt="logo image"
+            />
+            <p class="resturant__parrafo">
+                Nuestro restaurante “In Terra”, está ubicado en el nivel del
+                lobby del hotel. Complementan la arquitectura colonial de arcos
+                románticos construidos con el método de piedra seca, mesas de
+                travertino y cómodas sillas de fierro forjado. Usted puede
+                disfrutar de un almuerzo ligero bajo la luz calida del dia,
+                antes de tomar un tour por la ciudad. En la noche durante la
+                cena, podrá sumergirse en la atmósfera tranquila y disfrutar de
+                nuestro excelente servicio.
+            </p>
+            <a class="restaurant__button items-nav" href="#"
+                ><i class="bi bi-file-earmark-pdf"></i>Descarga nuestra Carta</a
+            >
+        </div>
+</section>
+
+<style>
+    .restaurant__button {
+        background-color: #C9A724;
+        padding: 12px;
+        width: 240px;
+        font-weight: bolder;
+        border-radius: 5px;
+        color: var(--text-color-lista);
+        margin-top: 40px;
+    }
+
+    .resturant__container--feature {
+        display: flex;
+        gap:10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resturant__container-parrafo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .resturant__parrafo{
+        width: 520px;
+        text-align: center;
+        margin-top: 20px;
+        color: var(--text-color-lista);
+        font-family: var(--font-family-poppins);
+    }
+</style>

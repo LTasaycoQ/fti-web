@@ -8,6 +8,7 @@
     --font-family-primary: 'Roboto', serif;
     --font-family-secondary: "Vollkorn", serif;
     --font-family-tercer: 'Alex Brush', curisve;
+    --font-family-poppins: 'Poppins', sans-serif;
 }
 
 
@@ -27,6 +28,7 @@
 }
 
 .container {
+    width: 100%;
     margin-top: 50px;
 }
 
