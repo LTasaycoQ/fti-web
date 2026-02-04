@@ -1,39 +1,56 @@
 ---
-
+interface Section {
+    title: string;
+    content: string;
+    image: string;
+    alt: string;
+}
+const restaurantData = await Astro.glob("../../content/restaurant-info.md");
+const { frontmatter } = restaurantData[0];
+const sections = frontmatter.sections as Section[];
 ---
 
-<div class="container__detail--restaurante">
-    <div>
-        <p class="text__detail-experiences">
-            Nuestro restaurante lo deleitará con una exquisita variedad de
-            platos tradicionales, los cuales son considerados el Alimento
-            Sagrado para los Incas. <br> Nuestras comidas se presentan en un menú
-            especial diseñado por Le Cordon Blue Chefs. <br> Cada plato se prepara
-            con productos frescos, verduras orgánicas e ingredientes autóctonos
-            cuidadosamente seleccionados.
-        </p>
-    </div>
-    <div>
-        <img
-            src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/interra-menaje-rgjtvzxl0alphjas8ttc7nhojr80hoecmrjr6xom04.jpg?w=800&ssl=1"
-            alt=""
-        />
-    </div>
+<div class="w-[85%] restaurant-info">
+    {
+        sections.map((section) => (
+            <div class="info-item flex items-center justify-center gap-[10px]">
+                <div class="w-[50%] flex justify-center items-center">
+                    <div class="texto p-[17px] w-[100%]">
+                        <p class="text-letra text-start text-gray-500 text-[15.6px]">
+                            {section.content}
+                        </p>
+                    </div>
+                </div>
+                <div class="w-[50%] flex justify-center items-center">
+                    <img
+                        src={section.image}
+                        alt={section.alt}
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        ))
+    }
 </div>
 
 <style>
-    .container__detail--restaurante {
-        display: flex;
-        margin-top: 50px;
-        align-items: center;
-        gap:50px;
-        justify-content: center;
+    .info-item {
+        margin-bottom: 28px;
     }
-    .text__detail-experiences{
-        color: var(--text-color-lista);
-        padding: 30px;
-        border-right: 1px solid #ccac31;
-        border-bottom: 1px solid #ccac31;
+    .text-letra {
         font-family: var(--font-family-poppins);
-}
+    }
+
+    .info-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .info-item:nth-child(even) .texto {
+        border-top: 1px solid #d4af37;
+        border-left: 1px solid #d4af37;
+    }
+    .info-item:nth-child(odd) .texto {
+        border-bottom: 1px solid #d4af37;
+        border-right: 1px solid #d4af37;
+    }
 </style>
