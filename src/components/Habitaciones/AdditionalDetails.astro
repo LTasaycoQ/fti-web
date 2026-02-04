@@ -1,36 +1,75 @@
 ---
-import { servicesData } from "../../content/service";
+import RoomIncludes from "./RoomIncludes.astro";
 
-const half = Math.ceil(servicesData.items.length / 2);
-const col1 = servicesData.items.slice(0, half);
-const col2 = servicesData.items.slice(half);
+import { roomsData } from "../../content/RoomClasic/service";
+import "../../assets/styles/global.css";
 ---
 
+{
+  roomsData.map((room) => {
+    const half = Math.ceil(room.services.length / 2);
+    const col1 = room.services.slice(0, half);
+    const col2 = room.services.slice(half);
+    return (
+      <section class="mb-20">
+        <h2 class="text-gray-700 position__title title text-[1.5rem]">
+          {room.title}
+        </h2>
 
-<section class="container_detailService">
-  <div class="flex flex-col justify-center items-center">
-    <h1 class="title text-center text-[1.1rem] text-gray-600 mb-4">
-      {servicesData.title}
-    </h1>
-    <span class="w-[100px] bg-[#F6A818] relative top-[-8px] h-[1px]"></span>
-  </div>
+        <div class="w-full flex justify-center gap-[30px] items-center mb-8">
+          <button aria-label="Anterior" class="prevBtn">
+            <i class="bi bi-caret-left-fill bg-red-900 w-[2.2em] text-white p-2 rounded-full text-[20px]" />
+          </button>
 
-  <div class="flex flex-wrap gap-[40px] justify-center items-center">
-    <ul class="flex flex-col justify-start items-start">
-      {col1.map((item) => (
-        <li class="flex gap-[10px] items-center justify-center text-gray-600">
-          <i class="text-[#9E2222] text-[18px] bi bi-check-lg"></i>
-          {item}
-        </li>
-      ))}
-    </ul>
-    <ul class="flex flex-col justify-start items-start">
-      {col2.map((item) => (
-        <li class="flex gap-[10px] items-center justify-center text-gray-600">
-          <i class="text-[#9E2222] text-[18px] bi bi-check-lg"></i>
-          {item}
-        </li>
-      ))}
-    </ul>
-  </div>
-</section>
+          <div class="slider__rooms flex justify-start items-center overflow-x-scroll scroll-smooth gap-[20px] p-[20px] w-[78%]">
+            {room.images.map((img) => (
+              <img
+                src={img}
+                alt={room.title}
+                class="w-[24em] max-md:w-[45em]"
+                draggable="false"
+              />
+            ))}
+          </div>
+
+          <button aria-label="Siguiente" class="nextBtn">
+            <i class="bi bi-caret-right-fill bg-red-900 w-[2.2em] text-white p-2 rounded-full text-[20px]" />
+          </button>
+        </div>
+
+        <div class="lista__detail w-full flex justify-center items-center">
+          <RoomIncludes />
+        </div>
+
+        <h3 class="text-gray-700 text-[1.2rem] title">{room.titleService}</h3>
+
+        <div class="lista__detail flex flex-wrap gap-[40px] justify-center items-center">
+          <ul class="flex flex-col justify-start items-start">
+            {col1.map((item) => (
+              <li class="flex gap-[10px] items-center justify-center text-gray-600">
+                <i class="text-[#9E2222] text-[18px] bi bi-check-lg" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <ul class="flex flex-col justify-start items-start">
+            {col2.map((item) => (
+              <li class="flex gap-[10px] items-center justify-center text-gray-600">
+                <i class="text-[#9E2222] text-[18px] bi bi-check-lg" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    );
+  })
+}
+
+<style>
+  .lista__detail {
+    margin-bottom: 70px;
+    margin-top: 40px;
+  }
+</style>
