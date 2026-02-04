@@ -1,0 +1,21 @@
+export const servicesData = {
+  title: "SERVICIOS ADICIONALES",
+  items: [
+    "Espejo de aumento para maquillarse o afeitarse",
+    "Baños remodelados con porcelanato italiano de piso a techo",
+    "Batas",
+    "Pantuflas",
+    "Toallas de algodón",
+    "Selección de Amenities de baño mejorada",
+    "Teléfono en el baño",
+    "Ubicación preferencial",
+    "Habitaciones conectadas (con solicitud previa)",
+    'LED de 50" Smart TV',
+    "Traslados aeropuerto-hotel o viceversa de cortesía",
+    "Minibar",
+    'Colchas de pluma de ganso blanco "Pacific Coast"',
+    "Botella de agua de bienvenida",
+    "Habitaciones más amplias",
+    "Kit de infusiones",
+  ],
+};
