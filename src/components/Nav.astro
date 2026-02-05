@@ -3,7 +3,7 @@ import "../assets/styles/global.css";
 ---
 
 <nav class="nav">
-    <div class="menu-container">
+    <div class="menu-container w-[90%] max-sm:w-[90%]">
         <div class="nav__logo">
             <a href="/">
                 <img
@@ -13,16 +13,59 @@ import "../assets/styles/global.css";
             </a>
         </div>
 
-        <ul class="nav__list">
-            <li><a class="nav__link" href="/hotel">Hotel</a></li>
-            <li><a class="nav__link" href="/habitaciones">Habitaciones</a></li>
-            <li><a class="nav__link" href="/restaurant">Restaurantes</a></li>
-            <li><a class="nav__link" href="/masajes">Masajes</aW></li>
-            <li><a class="nav__link" href="#">Galería</a></li>
-            <li><a class="nav__link" href="#">Contacto</a></li>
-        </ul>
+        <div class="hidden lg:flex">
+            <ul class="flex gap-[40px] font-semibold text-[16px] text-white">
+                <li><a class="nav__link" href="/hotel">Hotel</a></li>
+                <li><a class="nav__link" href="/habitaciones">Habitaciones</a></li>
+                <li><a class="nav__link" href="/restaurant">Restaurantes</a></li>
+                <li><a class="nav__link" href="/masajes">Masajes</a></li>
+                <li><a class="nav__link" href="/galeria">Galería</a></li>
+                <li><a class="nav__link" href="/contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="flex lg:hidden" id="burguer-menu">
+            <label>
+                <div class="w-[65px] h-[45px] cursor-pointer flex flex-col items-center justify-center">
+                    <input class="hidden peer" type="checkbox" />
+                    <div class="w-[50%] h-[3px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.80rem] peer-checked:rotate-[-45deg]">
+                    </div>
+                    <div class="w-[50%] h-[3px] bg-white rounded-md transition-all duration-300 origin-center peer-checked:hidden">
+                    </div>
+                    <div class="w-[50%] h-[3px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.80rem] peer-checked:rotate-[45deg]">
+                    </div>
+                </div>
+            </label>
+        </div>
     </div>
 </nav>
+
+<div id="menu-responsive" class="menu-responsive   relative ">
+    <div class="absolute bg-[#1C1717] text-white text-[13px] font-medium w-full">
+        <ul>
+            
+            <li class="w-full  flex ">
+               <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/hotel">HOTEL</a>
+            </li>
+              <li class="w-full  flex ">
+               <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/habitaciones">HABITACIONES</a>
+            </li>
+              <li class="w-full  flex ">
+               <a class="pl-[40px]  w-full py-[10px]  border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/restaurantes">RESTAURANTE</a>
+            </li>
+              <li class="w-full  flex ">
+               <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/masajes">MASAJE</a>
+            </li>
+              <li class="w-full  flex ">
+               <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/galeria">GALERIA</a>
+            </li>
+              <li class="w-full  flex ">
+               <a class="pl-[40px]  w-full py-[10px]  border-t-[1px]  border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/contacto">CONTACTO</a>
+            </li>
+           
+        </ul>
+    </div>
+</div>
 
 <style>
     .nav {
@@ -35,25 +78,48 @@ import "../assets/styles/global.css";
         justify-content: space-between;
         align-items: center;
     }
-    .nav__list {
-        display: flex;
-        gap: 40px;
-        list-style: none;
-    }
-    .nav__link {
-        color: white;
-        font-weight: 700;
-        text-decoration: none;
-    }
+
     .nav__link:hover {
         color: #fa8e00;
     }
     .menu-container {
-        width: 80%;
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+    .menu-responsive{
+        display: none;
+        animation: nav-animatio 0.5s ease-in-out;
+    }
+
+
+    @keyframes nav-animatio {
+        0% {
+            transform: scaleY(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+        
+    }
+
 </style>
+
+<script type="module">
+
+    document.getElementById("burguer-menu").addEventListener("click", function () {
+        const menu = document.getElementById("menu-responsive");
+
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+            console.log("oculto");
+        } else {
+            menu.style.display = "block";
+            console.log("visible");
+        }
+
+    });
+
+</script>

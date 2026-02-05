@@ -1,27 +1,13 @@
 ---
-import Prueba from "./card.astro";
+import CardRooms from "./CardRooms.astro";
 import "/src/assets/styles/global.css"
 ---
 
-<section class="rooms container">
-  <h2 class="title rooms__title">NUESTRAS HABITACIONES Y SUITES</h2>
-  <p class="rooms__desc">Selecciona tu alojamiento. Nosotros nos encargamos del resto.</p>
+<section class="w-full flex flex-col justify-center items-center">
+  <h2 class="title text-center text-4xl p-[1em] pt-[2em]">NUESTRAS HABITACIONES Y SUITES</h2>
+  <p class="text-center text-gray-700">Selecciona tu alojamiento. Nosotros nos encargamos del resto.</p>
 
-  <Prueba />
+  <CardRooms />
 </section>
 
-<style>
-.rooms {
-  margin-top: 150px;
-  text-align: center;
-}
-.rooms__title{
-  font-size: 32px;
-}
 
-.rooms__desc {
-  margin-bottom: 40px;
-  color: #777;
-  font-size: 20px;
-}
-</style>

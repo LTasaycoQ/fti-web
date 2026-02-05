@@ -2,148 +2,63 @@
 
 ---
 
-<section
-	class="container section-img-casona-colonial container-web hotel-intro"
->
-	<div class="hotel-intro__cta">
-		<p class="title title--feature-left">
-			UNA ESTADÍA EN EL HOTEL TERRA ANDINA TE SITÚA EN EL CORAZÓN DE
-			CUSCO.
-		</p>
+<section class="w-full flex justify-center items-center pt-[40px] flex-wrap">
+	<div
+		class="w-[70%] max-lg:w-full flex justify-center items-center gap-[30px] max-md:flex-col p-[2em]"
+	>
+		<div
+			class="flex flex-col justify-center items-start gap-[20px] max-md:items-center"
+		>
+			<h2 class="text-start title text-3xl">
+				UNA ESTADÍA EN EL HOTEL TERRA ANDINA TE SITÚA EN EL CORAZÓN DE
+				CUSCO.
+			</h2>
 
-		<a href="#" class="hotel-intro__button">
-			<i class="bi bi-arrow-right"></i>
-			ABOUT US
-		</a>
-	</div>
+			<a
+				href="#"
+				class="bg-[#B89738] rounded-[5px] text-white w-[170px] justify-center p-[10px] flex gap-[10px]"
+			>
+				<i class="bi bi-arrow-right"></i>
+				ABOUT US
+			</a>
+		</div>
 
-	<div class="hotel-intro__content">
-		<h2 class="title title--feature">
-			TERRA ANDINA <br />
-			MANSION COLONIAL
-		</h2>
+		<div class="hotel-intro__content">
+			<h2 class="title text-4xl">
+				TERRA ANDINA <br />
+				MANSION COLONIAL
+			</h2>
 
-		<p class="hotel-intro__text">
-			Una mansión colonial en el distrito histórico de la antigua capital
-			del Imperio Inca, Cusco, Perú. Terra Andina es un hotel de primera
-			clase ubicado a media cuadra de la encantadora Plaza San Pedro, el
-			Mercado de San Pedro, diseñado por Eiffel, la Iglesia de San Pedro y
-			a solo cuatro cuadras de la Plaza de Armas.
-		</p>
+			<p class="text-gray-700 text-[15px]">
+				Una mansión colonial en el distrito histórico de la antigua
+				capital del Imperio Inca, Cusco, Perú. Terra Andina es un hotel
+				de primera clase ubicado a media cuadra de la encantadora Plaza
+				San Pedro, el Mercado de San Pedro, diseñado por Eiffel, la
+				Iglesia de San Pedro y a solo cuatro cuadras de la Plaza de
+				Armas.
+			</p>
 
-		<ul class="hotel-intro__features">
-			<li>
-				<i class="bi bi-check-circle-fill"></i>
-				Es el punto de partida perfecto para hacer de su visita a Cusco y
-				Machu Picchu una experiencia inolvidable.
-			</li>
-			<li>
-				<i class="bi bi-check-circle-fill"></i>
-				Nuestro personal amable y profesional le espera para garantizarle
-				una estancia agradable.
-			</li>
-		</ul>
-	</div>
+			<ul class="text-[13px] text-gray-500 pt-[20px]">
+				<li class="flex gap-[10px] items-center">
+					<i class="text-red-800 bi bi-check-circle-fill"></i>
+					Es el punto de partida perfecto para hacer de su visita a Cusco
+					y Machu Picchu una experiencia inolvidable.
+				</li>
+				<li class="flex gap-[10px] items-center">
+					<i class="text-red-800 bi bi-check-circle-fill"></i>
+					Nuestro personal amable y profesional le espera para garantizarle
+					una estancia agradable.
+				</li>
+			</ul>
+		</div>
 
-	<div class="hotel-intro__image">
-		<img
-			class="container-styleImagen"
-			src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/pasadizo-vert.jpg?resize=300%2C300&ssl=1"
-			alt="Pasadizo del hotel Terra Andina"
-			loading="lazy"
-		/>
+		<div class="p-[10px] bg-white shadow-black shadow-2xl">
+			<img
+				class="w-[52em]"
+				src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/pasadizo-vert.jpg?resize=300%2C300&ssl=1"
+				alt="Pasadizo del hotel Terra Andina"
+				loading="lazy"
+			/>
+		</div>
 	</div>
 </section>
-
-<style>
-	.hotel-intro {
-		display: flex;
-		gap: 35px;
-		justify-content: center;
-		align-items: flex-start;
-		font-family: var(--font-family-primary);
-	}
-
-	.title--feature-left {
-		font-size: 26px;
-		font-weight: 600;
-		color: var(--text-color-gray);
-		position: relative;
-		top: 30px;
-
-		text-align: start;
-	}
-	.title--feature {
-		text-align: start;
-	}
-	.hotel-intro__cta {
-		flex: 1;
-		max-width: 280px;
-	}
-
-	.hotel-intro__content {
-		flex: 2;
-		max-width: 600px;
-	}
-
-	.hotel-intro__image {
-		display: flex;
-		justify-content: center;
-	}
-
-	.hotel-intro__lead {
-		font-size: 18px;
-		font-weight: 600;
-		margin-bottom: 20px;
-	}
-
-	.hotel-intro__title {
-		font-size: 36px;
-		line-height: 1.1;
-		margin-bottom: 20px;
-	}
-
-	.hotel-intro__text {
-		font-size: 14px;
-		color: var(--text-color-gray);
-		margin-bottom: 20px;
-	}
-
-	.hotel-intro__features {
-		list-style: none;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-	}
-
-	.hotel-intro__features li {
-		display: flex;
-		gap: 10px;
-		color: var(--text-color-lista);
-		font-size: 14px;
-	}
-
-	.hotel-intro__features i {
-		color: var(--primary-color);
-		margin-top: 4px;
-	}
-
-	.hotel-intro__button {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		position: relative;
-		top: 40px;
-		background-color: #d8a614;
-		padding: 15px;
-		border-radius: 5px;
-		font-weight: bolder;
-		text-decoration: none;
-		color: rgb(255, 255, 255);
-	}
-	.hotel-intro__button:hover {
-		background-color: #ad850b;
-		transition: all 0.5s;
-	}
-</style>

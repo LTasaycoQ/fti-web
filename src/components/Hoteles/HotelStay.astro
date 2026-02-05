@@ -1,8 +1,10 @@
 ---
 import "/src/assets/styles/global.css";
+import HotelDetail from "../Hoteles/HotelDetail.astro";
+import HotelImg from "../Hoteles/Hotel-img.astro";
 ---
 
-<section class="container stay__container--feature">
+<section class=" stay__container--feature">
     <h1 class="title title--feature">GRAN LUGAR <span class="title title--feature stay__span-title ">PARA QUEDARSE</span>Y DISFRUTAR</h1>
     <div class="stay__container-parrafo">
         <p class="stay__parrafo">
@@ -14,7 +16,8 @@ import "/src/assets/styles/global.css";
             la Plaza Principal.
         </p>
     </div>
-
+    <HotelDetail />
+    <HotelImg />
 </section>
 
 <style>
@@ -34,7 +37,7 @@ import "/src/assets/styles/global.css";
         align-items: center;
     }
     .stay__container-parrafo {
-        width: 70em;
+        width: 90%;
     }
 
     .stay__parrafo {

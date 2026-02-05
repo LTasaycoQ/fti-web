@@ -13,8 +13,8 @@ const sections = frontmatter.sections as Section[];
 <div class="w-[85%] restaurant-info">
     {
         sections.map((section) => (
-            <div class="info-item flex items-center justify-center gap-[10px]">
-                <div class="w-[50%] flex justify-center items-center">
+            <div class="info-item flex max-md:flex-wrap items-center justify-center gap-[10px]">
+                <div class="w-[50%] max-md:w-[90%] flex justify-center items-center">
                     <div class="texto p-[17px] w-[100%]">
                         <p class="text-letra text-start text-gray-500 text-[15.6px]">
                             {section.content}

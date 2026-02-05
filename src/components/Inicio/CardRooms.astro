@@ -1,0 +1,49 @@
+---
+interface Section {
+    image: string;
+    text: string;
+    people: string;
+    bed: string;
+    area: string;
+    alt: string;
+}
+const roomsData = await Astro.glob("../../content/rooms-info.md");
+const { frontmatter } = roomsData[0];
+const sections = frontmatter.sections as Section[];
+---
+
+<div class="card-container max-lg:grid-cols-2 max-md:grid-cols-1  grid grid-cols-3 justify-center items-center gap-[40px] flex-wrap p-[40px]">
+    {
+        sections.map((section) => (
+            <div class="border-[1px] w-[285px] max-md:w-[100%]  border-gray-300 p-[10px]">
+                <div>
+                    <img
+                        class="imagen-card"
+                        src={section.image}
+                        alt={section.alt}
+                    />
+                </div>
+                <div>
+                    <h2 class="title text-2xl text-gray-700 font-normal pt-[10px]">{section.text}</h2>
+
+                    <div>
+                        <ul class="flex flex-col gap-[10px] pt-[10px] text-gray-600">
+                            <li class="items">
+                                <i class="text-[#F7A40F] icon-card bi bi-people-fill" />
+                                {section.people} Personas
+                            </li>
+                            <li class="items">
+                                <i class=" text-[#F7A40F] icon-card bi bi-textarea-resize" /> 
+                                {section.area}
+                            </li>
+                            <li class="items">
+                                <i class="text-[#F7A40F]  icon-card bi bi-truck-flatbed" /> 
+                                {section.bed} 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+</div>
