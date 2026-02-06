@@ -24,24 +24,16 @@ import "../assets/styles/global.css";
             </ul>
         </div>
 
-        <div class="flex lg:hidden" id="burguer-menu">
-            <label>
-                <div class="w-[65px] h-[45px] cursor-pointer flex flex-col items-center justify-center">
-                    <input class="hidden peer" type="checkbox" />
-                    <div class="w-[50%] h-[3px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.80rem] peer-checked:rotate-[-45deg]">
-                    </div>
-                    <div class="w-[50%] h-[3px] bg-white rounded-md transition-all duration-300 origin-center peer-checked:hidden">
-                    </div>
-                    <div class="w-[50%] h-[3px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.80rem] peer-checked:rotate-[45deg]">
-                    </div>
-                </div>
-            </label>
+        <div class="lg:hidden">
+            <span id="open-modal" class="bg-[#470D0D] p-[5px] "><svg aria-hidden="true" fill="#ffffff" width="30" height="30" role="presentation" class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path></svg></span>
+            <span id="close-modal" class="hidden bg-[#470D0D] p-[5px]"><svg aria-hidden="true"  height="30" width="30"  fill="#ffffff"  role="presentation" class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path></svg></span>
         </div>
+        
     </div>
 </nav>
 
-<div id="menu-responsive" class="menu-responsive   relative ">
-    <div class="absolute bg-[#1C1717] text-white text-[13px] font-medium w-full">
+<div id="menu-responsive" class="menu-responsive  hidden lg:hidden  relative ">
+    <div class="absolute   bg-[#1C1717] text-white text-[13px] font-medium w-full">
         <ul>
             
             <li class="w-full  flex ">
@@ -90,7 +82,6 @@ import "../assets/styles/global.css";
         align-items: center;
     }
     .menu-responsive{
-        display: none;
         animation: nav-animatio 0.5s ease-in-out;
     }
 
@@ -109,17 +100,15 @@ import "../assets/styles/global.css";
 
 <script type="module">
 
-    document.getElementById("burguer-menu").addEventListener("click", function () {
-        const menu = document.getElementById("menu-responsive");
-
-        if (menu.style.display === "block") {
-            menu.style.display = "none";
-            console.log("oculto");
-        } else {
-            menu.style.display = "block";
-            console.log("visible");
-        }
-
-    });
+   document.getElementById('open-modal').addEventListener("click", function() {
+        document.getElementById("menu-responsive").style.display = "block";
+        document.getElementById("open-modal").style.display = "none";
+        document.getElementById("close-modal").style.display = "block"
+    })
+    document.getElementById('close-modal').addEventListener("click", function() {
+        document.getElementById("close-modal").style.display = "none"
+        document.getElementById("menu-responsive").style.display = "none";
+        document.getElementById("open-modal").style.display = "block";
+    })
 
 </script>
