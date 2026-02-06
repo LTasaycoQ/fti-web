@@ -5,11 +5,12 @@ interface Section {
     image: string;
     alt: string;
 }
-const hotelData = await Astro.glob("../../content/hotel-info.md");
+
+
+const hotelInfo = import.meta.glob("../../content/restaurante-info.md", { eager: true });
+const hotelData = Object.values(hotelInfo) as any[];
 const { frontmatter } = hotelData[0];
 const sections = frontmatter.sections as Section[];
-
-
 ---
 
 <div class="container__detail--hotel  flex    justify-center items-center">
