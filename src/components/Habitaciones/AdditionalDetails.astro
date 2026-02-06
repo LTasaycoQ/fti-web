@@ -16,24 +16,24 @@ import "../../assets/styles/global.css";
           {room.title}
         </h2>
 
-        <div class="w-[80%] flex justify-center gap-[30px] items-center mb-8">
+        <div class="w-[80%] max-md:w-[100%] p-[15px] flex justify-center gap-[30px] items-center mb-8">
           <button aria-label="Anterior" class="prevBtn">
-            <i class="bi bi-caret-left-fill bg-red-900 w-[2.2em] text-white p-2 rounded-full text-[20px]" />
+            <i class="bi bi-caret-left-fill bg-red-900 text-white  p-[8px] rounded-full text-[18px]" />
           </button>
 
-          <div class="slider__rooms flex justify-start items-center overflow-x-scroll scroll-smooth gap-[20px] p-[20px] w-[78%]">
+          <div class="slider__rooms flex justify-start items-center overflow-x-scroll scroll-smooth gap-[20px] max-md:w-[100%] w-[78%]">
             {room.images.map((img) => (
               <img
                 src={img}
                 alt={room.title}
-                class="w-[24em] max-md:w-[45em]"
+                class="w-[24em] max-md:w-[100%]"
                 draggable="false"
               />
             ))}
           </div>
 
           <button aria-label="Siguiente" class="nextBtn">
-            <i class="bi bi-caret-right-fill bg-red-900 w-[2.2em] text-white p-2 rounded-full text-[20px]" />
+            <i class="bi bi-caret-right-fill bg-red-900  text-white p-[8px] rounded-full text-[18px]" />
           </button>
         </div>
 
