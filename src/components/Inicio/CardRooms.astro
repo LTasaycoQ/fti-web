@@ -7,6 +7,8 @@ interface Section {
     area: string;
     alt: string;
 }
+
+
 const roomsData = await Astro.glob("../../content/rooms-info.md");
 const { frontmatter } = roomsData[0];
 const sections = frontmatter.sections as Section[];

@@ -8,13 +8,12 @@ import AndeandLand from "../components/Inicio/AndeanLand.astro";
 import GuaranteedStay from "../components/Inicio/GuaranteedStay.astro";
 import "../assets/styles/global.css";
 
-
-import fondoImagen from "../assets/backgrounds/baner-terra.webp"; 
+import fondoImagen from "../assets/backgrounds/baner-terra.webp";
 ---
 
 <BaseLayout title="Inicio">
     <Fondos imgFondo={`url(${fondoImagen.src})`} />
-    
+
     <main class="home">
         <HistoricCenter />
         <AndeandLand />
