@@ -1,0 +1,43 @@
+---
+interface Section {
+    text: string;
+    image: string;
+    alt: string;
+}
+const serviceHotel = await Astro.glob("../../content/info-inicio.md");
+const { frontmatter } = serviceHotel[0];
+const sections = frontmatter.sections as Section[];
+---
+
+<section class="section-img-casona-colonial container-web">
+    <br />
+    <h2 class="title text-center font-light text-4xl text-gray-700">
+        LA ESTANCIA PERFECTA, GARANTIZADA
+    </h2>
+    <p class="text-subtitle pt-[10px]">
+        Numerosos servicios para garantizar su relax y comodidad.
+    </p>
+</section>
+
+<div class="flex justify-center pt-[30px] items-center ">
+    <div class=" w-[70%] max-lg:w-[95%] grid grid-cols-5 max-md:grid-cols-3 max-sm:grid-cols-2 gap-[50px]">
+        {
+            sections.map((section) => (
+                <div class="flex text-center gap-[18px] flex-col justify-center items-center ">
+                    <img src={section.image} alt={section.alt} />
+                    <span class="text-[14px] text-gray-700">
+                        {section.text}
+                    </span>
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<style>
+    .text-subtitle {
+        text-align: center;
+        font-size: 18px;
+        color: var(--text-color-gray);
+    }
+</style>
