@@ -10,11 +10,8 @@ interface Section {
 
 
 const roomsImport = import.meta.glob("../../content/rooms-info.md", { eager: true });
-
 const roomsData = Object.values(roomsImport) as any[];
-
 const { frontmatter } = roomsData[0];
-
 const sections = frontmatter.sections as Section[];
 ---
 

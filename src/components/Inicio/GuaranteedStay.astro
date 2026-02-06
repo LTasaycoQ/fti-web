@@ -5,11 +5,8 @@ interface Section {
     alt: string;
 }
 const servicioHotel = import.meta.glob("../../content/info-inicio.md", { eager: true });
-
 const servicioData = Object.values(servicioHotel) as any[];
-
 const { frontmatter } = servicioData[0];
-
 const sections = frontmatter.sections as Section[];
 ---
 
