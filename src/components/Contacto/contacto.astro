@@ -1,27 +1,45 @@
 ---
 ---
-<section>
-    <div>
+<section class="p-[25px] flex max-md:flex-col gap-[70px] pt-[45px] ">
 
-        <ul>
-            <li></li>
-        </ul>
+    <div class="w-[50%] max-md:w-full  flex justify-end">
 
+        <form action="" class="w-[420px] max-md:w-full flex flex-col gap-[20px]">
+            <input class="border-[1px] border-gray-400 p-[9px] rounded-[7px]" placeholder="Nombre" type="text">
+            <input class="border-[1px] border-gray-400 p-[9px] rounded-[7px]"  placeholder="Apellido" type="text">
+            <input class="border-[1px] border-gray-400 p-[9px] rounded-[7px]"  placeholder="Numero Telefonico" type="text">
+            <input class="border-[1px] border-gray-400 p-[9px] rounded-[7px]"  placeholder="email" type="email">
+            <textarea class="border-[1px] border-gray-400 p-[9px] rounded-[7px]" placeholder="Mensaje"  name="Mensaje" id=""></textarea>
+            <button class="w-full bg-[#CEC061] p-[10px] rounded-[8px] text-white font-black">Enviar</button>
+        </form>
 
     </div>
 
-        <div class="mapouter">
-            <div class="gmap_canvas">
-                <iframe
-                    width="500"
-                    height="349"
+
+    <div class="w-[50%] max-lg:w-full flex flex-wrap flex-col gap-[30px]">
+
+        <ul class="flex flex-col jutify-center items-start text-gray-700 ">
+            <li class="flex items-center gap-[10px]"><i class="text-[#C08E1F] bi bi-geo-alt-fill"></i>Calle Union 184, Cusco, Perú</li>
+            <li class="flex items-center gap-[10px]"><i class="text-[#C08E1F] bi bi-telephone-fill"></i>Reservaciones: +51 987 945 817</li>
+            <li class="flex items-center gap-[10px]"><i class="text-[#C08E1F] bi bi-telephone-fill"></i>Recepcion: +51 997 564</li>
+            <li class="flex text-[16.5px] p-[8px] items-center gap-[10px]">Contacto Hotel:</li>
+            <li class="flex items-center gap-[10px]"><i class="text-[#C08E1F] bi bi-telephone-fill"></i>(51 - 84) 887-72950</li>
+            <li class="flex items-center gap-[10px]"><i class="text-[#C08E1F] bi bi-telephone-fill"></i>(51 - 84) 887-72950</li>
+            <li class="flex items-center gap-[10px]"><i class="text-[#C08E1F] bi bi-envelope"></i>reservas@TerraAndinaHotel.com</li>
+        </ul>
+
+         <div class="mapouter">
+            <div class="gmap_canvas  w-full">
+                <iframe class="max-md:w-[100%] w-[80%] h-[355px]"
                     id="gmap_canvas"
                     src="https://maps.google.com/maps?q=Terra+Andina+Hotel&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
                     marginwidth="0">
                 </iframe>
             </div>
         </div>
+
+
+    </div>
+
+       
 </section>
