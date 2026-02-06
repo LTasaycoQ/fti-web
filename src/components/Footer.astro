@@ -2,20 +2,19 @@
 
 ---
 
-<footer class="footer w-full  bottom-0">
-	<div class="footer__container max-md:flex-col">
-		<div class="footer__col footer__brand">
+<footer class="footer w-full bottom-0">
+	<div class="footer__container flex items-start jutify-between gap-[40px] max-md:flex-col">
+		<div class="footer__col footer__brand pt-[30px]">
 			<img
 				class="logo"
 				src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Logo-TAH-COL.png?fit=95%2C95&ssl=1"
 				alt="Terra Andina Hotel"
 			/>
-			
 		</div>
 
-		<div class="footer__col">
+		<div class="footer__col  ">
 			<span
-				class="title-footer text-white font-bold border-b-2 border-red-500"
+				class="title-footer  text-white font-bold border-b-2 border-red-500"
 				>Contacto</span
 			>
 			<ul class="text-gray-400 lista-elementos">
@@ -36,37 +35,46 @@
 		</div>
 
 		<div class="footer__col">
-			<span class="text-white font-bold border-b-2 border-red-500"
+			<span class="title-footer text-white font-bold border-b-2 border-red-500"
 				>Pages</span
 			>
 			<ul class="text-gray-400 lista-elementos">
 				<li>
-					<a class="flex gap-[10px] items-center justify-center" href="#"
-						><i class="icon bi bi-link-45deg"></i>Hotel</a
+					<a
+						class="flex gap-[10px] items-center justify-center"
+						href="#"><i class="icon bi bi-link-45deg"></i>Hotel</a
 					>
 				</li>
 				<li>
-					<a class="flex gap-[10px] items-center justify-center" href="#"
+					<a
+						class="flex gap-[10px] items-center justify-center"
+						href="#"
 						><i class="icon bi bi-link-45deg"></i>Habitaciones</a
 					>
 				</li>
 				<li>
-				<a class="flex gap-[10px] items-center justify-center" href="#"
+					<a
+						class="flex gap-[10px] items-center justify-center"
+						href="#"
 						><i class="icon bi bi-link-45deg"></i>Restaurantes</a
 					>
 				</li>
 				<li>
-				<a class="flex gap-[10px] items-center justify-center" href="#"
-						><i class="icon bi bi-link-45deg"></i>Masajes</a
+					<a
+						class="flex gap-[10px] items-center justify-center"
+						href="#"><i class="icon bi bi-link-45deg"></i>Masajes</a
 					>
 				</li>
 				<li>
-					<a class="flex gap-[10px] items-center justify-center" href="#"
-						><i class="icon bi bi-link-45deg"></i>Galería</a
+					<a
+						class="flex gap-[10px] items-center justify-center"
+						href="#"><i class="icon bi bi-link-45deg"></i>Galería</a
 					>
 				</li>
 				<li>
-					<a class="flex gap-[10px] items-center justify-center" href="#"
+					<a
+						class="flex gap-[10px] items-center justify-center"
+						href="#"
 						><i class="icon bi bi-link-45deg"></i>Contacto</a
 					>
 				</li>
@@ -74,10 +82,12 @@
 		</div>
 
 		<div class="footer__col">
-			<span class="text-white font-bold border-b-2 border-red-500"
+			<span class="title-footer text-white font-bold border-b-2 border-red-500"
 				>Payment Options</span
 			>
-			<div class=" text-gray-400 flex justify-center items-center gap-[15px] mt-4">
+			<div
+				class="text-gray-400 flex justify-center items-center gap-[15px] mt-4"
+			>
 				<img
 					src="https://img.icons8.com/color/512/visa.png"
 					class="w-[53px]"
@@ -140,9 +150,11 @@
 			<span class="title-footer" style="margin-top:20px; display:block;"
 				>Comparte tus comentarios</span
 			>
-			<p class="footer__desc flex justify-center items-center">
-				<aspan>red1</aspan>
-				<span>red2</span>
+			<p class=" flex justify-start items-center gap-[30px]">
+				<aspan class="cursor-pointer bg-green-400 hover:bg-green-600 text-white text-[25px] font-bold rounded-full p-[3px] pr-[12px] pl-[12px]"><i class="bi bi-whatsapp"></i></aspan>
+
+				<aspan class="cursor-pointer bg-blue-400  hover:bg-blue-700 flex-items-center justify-center text-white text-[25px] font-bold rounded-full p-[3px] pr-[12px] pl-[12px]"><i class="bi bi-facebook"></i></aspan>
+
 			</p>
 		</div>
 	</div>
@@ -152,26 +164,25 @@
 	.footer {
 		background-color: #1d1d27;
 		border-top: 1px solid #333;
-		margin-top:60px;
+		margin-top: 60px;
 		color: var(--text-color-primary);
 		font-family: var(--font-family-primary);
 	}
 
+.title-footer {
+	margin-bottom: 20px;
+}
+
 	.footer__container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 50px 50px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 40px;
+		padding: 40px 40px;
 	}
 
 	.footer__col {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
 	}
 
 	.footer__brand {
