@@ -1,0 +1,30 @@
+---
+
+---
+
+<div id="booking-engine-container" class="w-full pt-[50px]">
+    <script is:inline>
+        window.addEventListener("load", function () {
+            let id_partner = "2992";
+            let container_div = "#booking-engine-container";
+            let lang = "es";
+            let engine_color = "#d99e23";
+
+            if (typeof FNSbooking !== "undefined") {
+                let fnsbooking = new FNSbooking(
+                    id_partner,
+                    container_div,
+                    lang,
+                    engine_color,
+                    false,
+                    false,
+                    "0px",
+                    "0px",
+                );
+                fnsbooking.show();
+            } else {
+                console.error("FNSbooking no se cargó correctamente");
+            }
+        });
+    </script>
+</div>

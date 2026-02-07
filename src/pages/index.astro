@@ -8,12 +8,16 @@ import AndeandLand from "../components/Inicio/AndeanLand.astro";
 import GuaranteedStay from "../components/Inicio/GuaranteedStay.astro";
 
 import fondoImagen from "../assets/backgrounds/baner-terra.webp";
+import FormReserva from "../utils/formReserva.astro";
 ---
 
 <BaseLayout title="Inicio">
     <Fondos imgFondo={`url(${fondoImagen.src})`} />
 
     <main class="home">
+
+        <FormReserva/>
+
         <HistoricCenter />
         <AndeandLand />
         <Rooms />
