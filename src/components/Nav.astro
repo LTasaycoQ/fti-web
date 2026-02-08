@@ -12,7 +12,7 @@
             </a>
         </div>
 
-        <div class="hidden lg:flex">
+        <div class=" max-lg:hidden">
             <ul class="flex gap-[40px] font-semibold text-[16px] text-white">
                 <li><a class="nav__link" href="/hotel">Hotel</a></li>
                 <li><a class="nav__link" href="/habitaciones">Habitaciones</a></li>
@@ -94,17 +94,28 @@
 
 </style>
 
-<script type="module">
+<script>
+  const setupMenu = () => {
+    const openBtn = document.getElementById('open-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const menu = document.getElementById('menu-responsive');
 
-   document.getElementById('open-modal').addEventListener("click", function() {
-        document.getElementById("menu-responsive").style.display = "block";
-        document.getElementById("open-modal").style.display = "none";
-        document.getElementById("close-modal").style.display = "block"
-    })
-    document.getElementById('close-modal').addEventListener("click", function() {
-        document.getElementById("close-modal").style.display = "none"
-        document.getElementById("menu-responsive").style.display = "none";
-        document.getElementById("open-modal").style.display = "block";
-    })
+    if (openBtn && closeBtn && menu) {
+      openBtn.onclick = () => {
+        menu.classList.remove('hidden');
+        openBtn.classList.add('hidden');
+        closeBtn.classList.remove('hidden');
+      };
 
+      closeBtn.onclick = () => {
+        menu.classList.add('hidden');
+        openBtn.classList.remove('hidden');
+        closeBtn.classList.add('hidden');
+      };
+    }
+  };
+
+  setupMenu();
+
+  document.addEventListener('astro:page-load', setupMenu);
 </script>
