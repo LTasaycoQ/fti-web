@@ -1,15 +1,13 @@
 ---
+import { Image } from "astro:assets";
+import logoTah from "../assets/logo/Logo-TAH-ENG.webp"
 
 ---
 
 <footer class="footer w-full flex justify-center items-center bottom-0">
 	<div class="footer__container flex items-center lg:items-start w-full jutify-between gap-[40px] max-md:flex-col">
 		<div class="footer__col w-full flex justify-center items-center footer__brand pt-[30px]">
-			<img
-				class="logo w-[200px] pt-[15px] max-md:w-full max-md:h-[100%]"
-				src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Logo-TAH-ENG-1.png?fit=157%2C95&ssl=1"
-				alt="Terra Andina Hotel"
-			/>
+			<Image class="logo w-[200px] pt-[15px] max-md:w-full max-md:h-[100%]" src={logoTah} alt="Terra Andina Hote"/>
 		</div>
 
 		<div class="footer__col w-full ">

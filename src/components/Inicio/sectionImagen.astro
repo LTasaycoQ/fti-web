@@ -1,24 +1,18 @@
 ---
+import { Image } from "astro:assets";
 
+import barVert from "../../assets/images/Bar-vert.webp";
+import repcionTah from "../../assets/images/repcion-tah.webp";
 ---
 
-<div class="w-full flex justify-center max-md:flex-col gap-[35px] p-[2em] items-center ">
-    <div class="p-[13px] bg-white shadow-black shadow-2xl ">
-        <img
-             class="w-[18em]"
-            src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/Bar-vert-rggmdkzv5enqp07xfesy0100zyn0mh5sxd9hipfksi.jpg?w=800&ssl=1"
-            alt="img-bar"
-        />
+<div class="w-full flex justify-center max-md:flex-col gap-[35px] p-[2em] items-center">
+    <div class="p-[13px] bg-white shadow-black shadow-2xl">
+        <Image class="w-[18em]" src={barVert} alt="bar-vert" />
     </div>
     <div class="container-seccion-imagenes">
         <div class="p-[13px] bg-white shadow-black shadow-2xl">
-            <img
-                class="w-[30em]"
-                src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/repcion-tah-rggmlzo0jjvlkdvclzaaub5ok9d7bjv8x25ihcso50.jpg?w=800&ssl=1"
-                alt="img-sala"
-            />
+            <Image class="w-[30em]" src={repcionTah} alt="repcion-tah" />
         </div>
-
         <span class="span-imagen">Nuestro Hotel</span>
     </div>
 </div>

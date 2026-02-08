@@ -21,6 +21,10 @@
     font-family: var(--font-family-primary);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .title {
     font-family: var(--font-family-secondary);
     margin-bottom: 10px;

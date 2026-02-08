@@ -1,23 +1,18 @@
 ---
+import { Image } from "astro:assets";
+import pasadizVert from "../../assets/images/pasadizo-vert.webp";
 
 ---
 
 <section class="w-full flex justify-center items-center pt-[40px] flex-wrap">
-	<div
-		class="w-[70%] max-lg:w-full flex justify-center items-center gap-[30px] max-md:flex-col p-[2em]"
-	>
-		<div
-			class="flex flex-col justify-center items-start gap-[20px] max-md:items-center"
-		>
-			<h2 class="text-start title text-3xl">
+	<div class="w-[80%] max-lg:w-full flex justify-center items-center gap-[30px] max-md:flex-col p-[2em]">
+		<div class="flex flex-col justify-center items-start gap-[20px] max-md:items-center">
+			<h3 class="text-start title text-3xl">
 				UNA ESTADÍA EN EL HOTEL TERRA ANDINA TE SITÚA EN EL CORAZÓN DE
 				CUSCO.
-			</h2>
+			</h3>
 
-			<a
-				href="#"
-				class="bg-[#B89738] rounded-[5px] text-white w-[170px] justify-center p-[10px] flex gap-[10px]"
-			>
+			<a href="#" class="bg-[#B89738] rounded-[5px] text-white w-[170px] justify-center p-[10px] flex gap-[10px]">
 				<i class="bi bi-arrow-right"></i>
 				ABOUT US
 			</a>
@@ -53,12 +48,7 @@
 		</div>
 
 		<div class="p-[10px] bg-white shadow-black shadow-2xl">
-			<img
-				class="w-[52em]"
-				src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/pasadizo-vert.jpg?resize=300%2C300&ssl=1"
-				alt="Pasadizo del hotel Terra Andina"
-				loading="lazy"
-			/>
+			<Image loading="lazy" class="w-[52em]" src={pasadizVert} alt="pasadizo-terraAndinaHote"/>
 		</div>
 	</div>
 </section>
