@@ -10,6 +10,7 @@ const servicioHotel = import.meta.glob("../../content/info-inicio.md", {
 const servicioData = Object.values(servicioHotel) as any[];
 const { frontmatter } = servicioData[0];
 const sections = frontmatter.sections as Section[];
+
 ---
 
 <section class="section-img-casona-colonial container-web pt-[5em]">
