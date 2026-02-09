@@ -1,22 +1,28 @@
 ---
+
 ---
 
 <nav class="nav">
     <div class="menu-container w-[90%] max-sm:w-[90%]">
         <div class="nav__logo">
-            <a href="/">
+            <a href="/" class="logo-link" aria-label="Volver al inicio">
                 <img
                     src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Logo-TAH-ENG-1.png?fit=157%2C95&ssl=1"
-                    alt="Terra Andina Hotel"
+                    alt="Logotipo de Terra Andina Colonial Mansion Hotel Cusco"
+                    loading="eager"
                 />
             </a>
         </div>
 
-        <div class=" max-lg:hidden">
+        <div class="max-lg:hidden">
             <ul class="flex gap-[40px] font-semibold text-[16px] text-white">
                 <li><a class="nav__link" href="/hotel">HOTEL</a></li>
-                <li><a class="nav__link" href="/habitaciones">HABITACIONES</a></li>
-                <li><a class="nav__link" href="/restaurantes">RESTAURANTES</a></li>
+                <li>
+                    <a class="nav__link" href="/habitaciones">HABITACIONES</a>
+                </li>
+                <li>
+                    <a class="nav__link" href="/restaurantes">RESTAURANTES</a>
+                </li>
                 <li><a class="nav__link" href="/masajes">MASAJES</a></li>
                 <li><a class="nav__link" href="/galeria">GALERIA</a></li>
                 <li><a class="nav__link" href="/contacto">CONTACTO</a></li>
@@ -24,34 +30,80 @@
         </div>
 
         <div class="lg:hidden">
-            <span id="open-modal" class="bg-[#470D0D] p-[5px] "><svg aria-hidden="true" fill="#ffffff" width="30" height="30" role="presentation" class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path></svg></span>
-            <span id="close-modal" class="hidden bg-[#470D0D] p-[5px]"><svg aria-hidden="true"  height="30" width="30"  fill="#ffffff"  role="presentation" class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path></svg></span>
+            <span id="open-modal" class="bg-[#470D0D] p-[5px]"
+                ><svg
+                    aria-hidden="true"
+                    fill="#ffffff"
+                    width="30"
+                    height="30"
+                    role="presentation"
+                    class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
+                    viewBox="0 0 1000 1000"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"
+                    ></path></svg
+                ></span
+            >
+            <span id="close-modal" class="hidden bg-[#470D0D] p-[5px]"
+                ><svg
+                    aria-hidden="true"
+                    height="30"
+                    width="30"
+                    fill="#ffffff"
+                    role="presentation"
+                    class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close"
+                    viewBox="0 0 1000 1000"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"
+                    ></path></svg
+                ></span
+            >
         </div>
-        
     </div>
 </nav>
 
-<div id="menu-responsive" class="menu-responsive  hidden lg:hidden  relative ">
-    <div class="absolute  lg:hidden  bg-[#1C1717] text-white text-[13px] font-medium w-full">
+<div id="menu-responsive" class="menu-responsive hidden lg:hidden relative">
+    <div
+        class="absolute lg:hidden bg-[#1C1717] text-white text-[13px] font-medium w-full"
+    >
         <ul>
-            
-            <li class="w-full  flex "> <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/hotel">HOTEL</a></li>
-              <li class="w-full  flex ">
-               <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/habitaciones">HABITACIONES</a>
+            <li class="w-full flex">
+                <a
+                    class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
+                    href="/hotel">HOTEL</a>
             </li>
-              <li class="w-full  flex ">
-               <a class="pl-[40px]  w-full py-[10px]  border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/restaurantes">RESTAURANTE</a>
+            <li class="w-full flex">
+                <a
+                    class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
+                    href="/habitaciones">HABITACIONES</a
+                >
             </li>
-              <li class="w-full  flex ">
-               <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/masajes">MASAJE</a>
+            <li class="w-full flex">
+                <a
+                    class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
+                    href="/restaurantes">RESTAURANTE</a
+                >
             </li>
-              <li class="w-full  flex ">
-               <a class="pl-[40px]  w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/galeria">GALERIA</a>
+            <li class="w-full flex">
+                <a
+                    class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
+                    href="/masajes">MASAJE</a
+                >
             </li>
-              <li class="w-full  flex ">
-               <a class="pl-[40px]  w-full py-[10px]  border-t-[1px]  border-[#2D2828] bg-transparent hover:bg-[#3F444B]" href="/contacto">CONTACTO</a>
+            <li class="w-full flex">
+                <a
+                    class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
+                    href="/galeria">GALERIA</a
+                >
             </li>
-           
+            <li class="w-full flex">
+                <a
+                    class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
+                    href="/contacto">CONTACTO</a
+                >
+            </li>
         </ul>
     </div>
 </div>
@@ -78,8 +130,17 @@
         justify-content: space-between;
         align-items: center;
     }
-    .menu-responsive{
-        animation: nav-animation 0.5s ease-in-out ;
+    .menu-responsive {
+        animation: nav-animation 0.5s ease-in-out;
+    }
+    .logo-link {
+        text-decoration: none;
+        display: inline-block;
+        border: none;
+    }
+    .logo-link img {
+        display: block;
+        border: none;
     }
 
     @keyframes nav-animation {
@@ -89,33 +150,31 @@
         100% {
             transform: scale(1);
         }
-        
     }
-
 </style>
 
 <script>
-  const setupMenu = () => {
-    const openBtn = document.getElementById('open-modal');
-    const closeBtn = document.getElementById('close-modal');
-    const menu = document.getElementById('menu-responsive');
+    const setupMenu = () => {
+        const openBtn = document.getElementById("open-modal");
+        const closeBtn = document.getElementById("close-modal");
+        const menu = document.getElementById("menu-responsive");
 
-    if (openBtn && closeBtn && menu) {
-      openBtn.onclick = () => {
-        menu.classList.remove('hidden');
-        openBtn.classList.add('hidden');
-        closeBtn.classList.remove('hidden');
-      };
+        if (openBtn && closeBtn && menu) {
+            openBtn.onclick = () => {
+                menu.classList.remove("hidden");
+                openBtn.classList.add("hidden");
+                closeBtn.classList.remove("hidden");
+            };
 
-      closeBtn.onclick = () => {
-        menu.classList.add('hidden');
-        openBtn.classList.remove('hidden');
-        closeBtn.classList.add('hidden');
-      };
-    }
-  };
+            closeBtn.onclick = () => {
+                menu.classList.add("hidden");
+                openBtn.classList.remove("hidden");
+                closeBtn.classList.add("hidden");
+            };
+        }
+    };
 
-  setupMenu();
+    setupMenu();
 
-  document.addEventListener('astro:page-load', setupMenu);
+    document.addEventListener("astro:page-load", setupMenu);
 </script>

@@ -5,32 +5,39 @@ import Nav from "../components/Nav.astro";
 import HeaderTop from "../components/HeaderTop.astro";
 import Footer from "../components/Footer.astro";
 
-
 const { title, description } = Astro.props;
-
-const defaultDesc = "Hotel Boutique en una casona colonial en el centro de Cusco. Vive la magia de los Andes.";
-const currentDesc = description || defaultDesc;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-s/09/7d/fa/27/terra-andina-hotel.jpg"/>
-    <meta property="og:image:type" content="image/jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <title>{title} - Terra Andina Colonial Mansion</title>
-    <meta name="description" content={currentDesc} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={`${title} - Terra Andina`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-s/09/7d/fa/27/terra-andina-hotel.jpg"/>
+    <meta property="og:image:alt" content="Fachada colonial del Hotel Terra Andina en Cusco" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://media-cdn.tripadvisor.com/media/photo-s/09/7d/fa/27/terra-andina-hotel.jpg" />
+
     <Links />
   </head>
   <body>
     <HeaderTop />
     <Nav />
     <slot />
-
     <Footer />
   </body>
 </html>
