@@ -1,9 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactoForm from "../components/Contacto/contacto.astro";
+
+const title = "Contacto";
+const description = "Ponte en contacto con Terra Andina Hotel en Cusco. Estamos en Calle Unión 184, cerca a la Plaza San Pedro. Reservas: +51 987 945 817 o ventas@terraandinahotel.com.";
 ---
 
-<BaseLayout title="Contacto">
+<BaseLayout title={title} description={description}>
     <main class="home">
         <ContactoForm />
     </main>

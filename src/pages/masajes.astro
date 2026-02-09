@@ -6,9 +6,13 @@ import Fondos from "../components/fondos.astro";
 import MasajesPasos from "../components/Masages/masajepasos.astro";
 import MasajePrecio from "../components/Masages/precios.astro";
 import OpenMassages from "../components/Masages/OpenMassages.astro";
+
+
+const title = "Masajes";
+const description = "Recupera tu energía de la altura de Cusco con nuestras 'Manos Curativas'. Masajes suecos, shiatsu y reflexología disponibles todos los días de 8am a 10pm.";
 ---
 
-<BaseLayout title="Masaje">
+<BaseLayout title={title} description={description}>
     <Fondos imgFondo={`url(${fondoImagen.src})`} />
     <main>
        <MasajeConsejo />

@@ -10,9 +10,11 @@ import FormReserva from "../utils/formReserva.astro";
 import fondoImagen from "../assets/backgrounds/baner-terra.webp";
 
 
+const title = "Inicio"
+const description = "Hospédate en Terra Andina Colonial Mansion, un hotel boutique en el corazón de Cusco. Disfruta de lujo colonial, confort moderno y una ubicación inmejorable.";
 ---
 
-<BaseLayout title="Inicio">
+<BaseLayout title={title} description={description}>
     <Fondos imgFondo={`url(${fondoImagen.src})`} />
 
     <main class="home">
