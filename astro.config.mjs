@@ -6,8 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // ESTA ES LA LÍNEA QUE FALTA
-  site: 'https://terraandinahotel.com', 
+  site: 'https://fti-weeb.netlify.app', 
 
   devToolbar: {
       enabled: false,
