@@ -59,7 +59,9 @@ html{
     box-shadow: 6px 8px 15px 0px #828282;
 }
 
-
+a{
+    text-decoration: none !important;
+}
 
 .text-p {
     width: 260px;
