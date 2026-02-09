@@ -14,23 +14,46 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <title>{title} - Terra Andina Colonial Mansion</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Terra Andina Colonial Mansion",
+        "description": "Hotel boutique colonial en el centro de Cusco",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Unión 184",
+          "addressLocality": "Cusco",
+          "addressRegion": "Cusco",
+          "addressCountry": "PE"
+        },
+        "telephone": "+51987945817",
+        "url": "https://terraandinahotel.com"
+      }
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={`${title} - Terra Andina`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-s/09/7d/fa/27/terra-andina-hotel.jpg"/>
-    <meta property="og:image:alt" content="Fachada colonial del Hotel Terra Andina en Cusco" />
+    <meta property="og:image" content="https://fti-weeb.netlify.app/_astro/baner-terra.Ckeutzn3.webp"/>
+    <meta
+      property="og:image:alt"
+      content="Fachada colonial del Hotel Terra Andina en Cusco"
+    />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="https://media-cdn.tripadvisor.com/media/photo-s/09/7d/fa/27/terra-andina-hotel.jpg" />
+    <meta
+      property="twitter:image"
+      content="https://fti-weeb.netlify.app/_astro/baner-terra.Ckeutzn3.webp"
+    />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <Links />
   </head>

@@ -1,25 +1,21 @@
 ---
-
+import { Image } from "astro:assets";
+import logo from "../assets/logo/Logo-TAH-ENG.webp";
 ---
 
 <nav class="nav">
     <div class="menu-container w-[90%] max-sm:w-[90%]">
         <div class="nav__logo">
-            <a href="/" class="logo-link" aria-label="Volver al inicio"><img
-                    src="https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Logo-TAH-ENG-1.png?fit=157%2C95&ssl=1"
-                    alt="Logotipo de Terra Andina Colonial Mansion Hotel Cusco"
-                    loading="eager"/></a>
+            <a href="/" class="logo-link" aria-label="Volver al inicio">
+                <Image loading="eager" src={logo} alt="Logotipo de Terra Andina Colonial Mansion Hotel Cusco"/>
+            </a>
         </div>
 
         <div class="max-lg:hidden">
             <ul class="flex gap-[40px] font-semibold text-[16px] text-white">
                 <li><a class="nav__link" href="/hotel">HOTEL</a></li>
-                <li>
-                    <a class="nav__link" href="/habitaciones">HABITACIONES</a>
-                </li>
-                <li>
-                    <a class="nav__link" href="/restaurantes">RESTAURANTES</a>
-                </li>
+                <li><a class="nav__link" href="/habitaciones">HABITACIONES</a></li>
+                <li><a class="nav__link" href="/restaurantes">RESTAURANTES</a></li>
                 <li><a class="nav__link" href="/masajes">MASAJES</a></li>
                 <li><a class="nav__link" href="/galeria">GALERIA</a></li>
                 <li><a class="nav__link" href="/contacto">CONTACTO</a></li>
@@ -69,7 +65,8 @@
             <li class="w-full flex">
                 <a
                     class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
-                    href="/hotel">HOTEL</a>
+                    href="/hotel">HOTEL</a
+                >
             </li>
             <li class="w-full flex">
                 <a
