@@ -1,41 +1,59 @@
 ---
----
-<section class="contacto-section">
 
+---
+
+<section class="contacto-section">
     <div class="container-form">
-        <form action="" class="form-contacto">
-            <input placeholder="Nombre" type="text">
-            <input placeholder="Apellido" type="text">
-            <input placeholder="Número Telefónico" type="text">
-            <input placeholder="Email" type="email">
-            <textarea placeholder="Mensaje" name="Mensaje"></textarea>
+        <form class="form-contacto">
+            <input name="Nombre" placeholder="Nombre" type="text" required />
+            <input
+                name="Apellido"
+                placeholder="Apellido"
+                type="text"
+                required
+            />
+            <input
+                name="Telefono"
+                placeholder="Número Telefónico"
+                type="text"
+            />
+            <input name="Email" placeholder="Email" type="email" required />
+            <textarea name="Mensaje" placeholder="Mensaje"></textarea>
             <button type="submit">Enviar</button>
         </form>
     </div>
 
     <div class="container-info">
         <ul class="lista-contacto">
-            <li><i class="bi bi-geo-alt-fill"></i>Calle Union 184, Cusco, Perú</li>
-            <li><i class="bi bi-telephone-fill"></i>Reservaciones: +51 987 945 817</li>
+            <li>
+                <i class="bi bi-geo-alt-fill"></i>Calle Union 184, Cusco, Perú
+            </li>
+            <li>
+                <i class="bi bi-telephone-fill"></i>Reservaciones: +51 987 945
+                817
+            </li>
             <li><i class="bi bi-telephone-fill"></i>Recepción: +51 997 564</li>
             <li class="contacto-titulo">Contacto Hotel:</li>
             <li><i class="bi bi-telephone-fill"></i>(51 - 84) 887-72950</li>
             <li><i class="bi bi-envelope"></i>reservas@TerraAndinaHotel.com</li>
         </ul>
 
-         <div class="mapouter">
+        <div class="mapouter">
             <div class="gmap_canvas">
-                <iframe 
+                <iframe
                     title="Mapa de ubicación Terra Andina Hotel"
                     class="mapa-iframe"
                     id="gmap_canvas"
                     src="https://maps.google.com/maps?q=Calle%20Union%20184%20Cusco&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    loading="lazy">
+                    loading="lazy"
+                >
                 </iframe>
             </div>
         </div>
     </div>
 </section>
+
+
 
 <style>
     .contacto-section {
@@ -45,7 +63,8 @@
         padding-top: 45px;
     }
 
-    .container-form, .container-info {
+    .container-form,
+    .container-info {
         width: 50%;
     }
 
@@ -61,7 +80,8 @@
         gap: 20px;
     }
 
-    .form-contacto input, .form-contacto textarea {
+    .form-contacto input,
+    .form-contacto textarea {
         border: 1px solid #9ca3af;
         padding: 9px;
         border-radius: 7px;
@@ -70,7 +90,7 @@
 
     .form-contacto button {
         width: 100%;
-        background-color: #CEC061;
+        background-color: #cec061;
         padding: 10px;
         border-radius: 8px;
         color: white;
@@ -105,7 +125,7 @@
     }
 
     .lista-contacto i {
-        color: #C08E1F;
+        color: #c08e1f;
     }
 
     .contacto-titulo {
@@ -126,14 +146,17 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-        .container-info { width: 100%; }
+        .container-info {
+            width: 100%;
+        }
     }
 
     @media (max-width: 768px) {
         .contacto-section {
             flex-direction: column;
         }
-        .container-form, .container-info {
+        .container-form,
+        .container-info {
             width: 100%;
         }
         .form-contacto {

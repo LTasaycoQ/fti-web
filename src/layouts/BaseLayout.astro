@@ -40,7 +40,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={`${title} - Terra Andina`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://fti-weeb.netlify.app/_astro/baner-terra.Ckeutzn3.webp"/>
+    <meta
+      property="og:image"
+      content="https://fti-weeb.netlify.app/_astro/baner-terra.Ckeutzn3.webp"
+    />
     <meta
       property="og:image:alt"
       content="Fachada colonial del Hotel Terra Andina en Cusco"
@@ -54,7 +57,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       property="twitter:image"
       content="https://fti-weeb.netlify.app/_astro/baner-terra.Ckeutzn3.webp"
     />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href="/sitemap.xml" />
     <Links />
   </head>
   <body>
@@ -65,9 +68,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </body>
 </html>
 
-
 <style is:global>
-      a { text-decoration: none !important; }
-      img { border: 0; }
-      body { font-family: sans-serif; line-height: 1.5; }
+  a {
+    text-decoration: none !important;
+  }
+  img {
+    border: 0;
+  }
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
 </style>
