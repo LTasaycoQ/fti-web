@@ -5,16 +5,16 @@ export const iconsRoomIncludes = [
         label: "Baño privado",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/ducha-rggra34qypmfdprvxwhvjyghee0t9mldtvcmdtb12s.webp?w=800&ssl=1",
+        image: "/images/caliente.webp",
         label: "Baño privado",
     },
 
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/caliente-rggr9o3bxd1u7ydqdpzug293w82xugxofswupdxbuc.png?w=800&ssl=1",
+        image: "/images/caliente.webp",
         label: "Caliente",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/tv-rggrb1wrzky1baddatj2m7ojdn9e6ffganhl51vgok.webp?w=800&ssl=1",
+        image: "/images/wifi-free.webp",
         label: "TV",
     },
     {
@@ -30,12 +30,12 @@ export const iconsRoomIncludes = [
         label: "Caliente",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/secadora-rggrax7l1erlp8k729hxrqv8epwk3xwsm085qo2fjo.webp?w=800&ssl=1",
-        label: "Caliente",
+        image: "/images/calefaccion.webp",
+        label: "calefaccion",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/secadora-rggrax7l1erlp8k729hxrqv8epwk3xwsm085qo2fjo.webp?w=800&ssl=1",
-        label: "Caliente",
+        image: "/images/caja-seguridad.webp",
+        label: "Caja fuerte",
     },
     {
         image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/secadora-rggrax7l1erlp8k729hxrqv8epwk3xwsm085qo2fjo.webp?w=800&ssl=1",
