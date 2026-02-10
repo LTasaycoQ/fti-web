@@ -1,44 +1,54 @@
 
 export const iconsRoomIncludes = [
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/ducha-rggra34qypmfdprvxwhvjyghee0t9mldtvcmdtb12s.webp?w=800&ssl=1",
+        image: "/images/icono/ducha.webp",
         label: "Baño privado",
+        labelEN: "Private Bathroom",
     },
     {
-        image: "/images/caliente.webp",
-        label: "Baño privado",
+        image: "/images/icono/caliente.webp",
+        label: "Agua Caliente",
+        labelEN: "Hot water",
     },
 
     {
-        image: "/images/caliente.webp",
-        label: "Caliente",
+        image: "/images/icono/tv.webp",
+        label: "Smart Tv 50°",
+        labelEN: "Smart TV 50″",
     },
     {
-        image: "/images/wifi-free.webp",
-        label: "TV",
+        image: "/images/icono/wifi-free.webp",
+        label: "WIFI Gratis",
+        labelEN: "WiFi free",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/wifi-rggrb3sgd90lyiamzucbr77gkf04ltmwywsk3lsoc4.webp?w=800&ssl=1",
-        label: "WiFi",
+        image: "/images/icono/despertar.webp",
+        label: "Servicio de Despertador",
+        labelEN: "Wake-up service",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/despertar-rggra0b8e7ikevvzed9zuh63m8epmja6the5xzf7lg.webp?w=800&ssl=1",
-        label: "Despertador",
+        image: "/images/icono/secadora.webp",
+        label: "Secadora de Cabello",
+        labelEN: "Hair dryer",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/secadora-rggrax7l1erlp8k729hxrqv8epwk3xwsm085qo2fjo.webp?w=800&ssl=1",
-        label: "Caliente",
+        image: "/images/icono/planchador.webp",
+        label: "Set de planchado bajo peticion",
+        labelEN: "Ironing set on request",
     },
     {
-        image: "/images/calefaccion.webp",
-        label: "calefaccion",
+        image: "/images/icono/calefaccion.webp",
+        label: "Calefaccion",
+        labelEN: "Heating",
     },
     {
-        image: "/images/caja-seguridad.webp",
+        image: "/images/icono/caja-seguridad.webp",
         label: "Caja fuerte",
+        labelEN: "In-room safe deposit box",
     },
     {
-        image: "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/elementor/thumbs/secadora-rggrax7l1erlp8k729hxrqv8epwk3xwsm085qo2fjo.webp?w=800&ssl=1",
-        label: "Caliente",
+        image: "/images/icono/telephone.webp",
+        label: "Telefono en el Baño",
+        labelEN: "In’room telephome",
     },
 ];

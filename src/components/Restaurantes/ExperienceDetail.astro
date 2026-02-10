@@ -5,6 +5,8 @@ interface Section {
     image: string;
     alt: string;
 }
+
+
 const restaurantData = await Astro.glob("../../content/restaurant-info.md");
 const { frontmatter } = restaurantData[0];
 const sections = frontmatter.sections as Section[];

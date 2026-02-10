@@ -1,7 +1,7 @@
 ---
 interface Section {
     title: string;
-    content: string;
+    contentEn: string;
     image: string;
     alt: string;
 }
@@ -17,7 +17,7 @@ const sections = frontmatter.sections as Section[];
                 <div class="w-[50%] max-md:w-[90%] flex justify-center items-center">
                     <div class="texto p-[17px] w-[100%]">
                         <p class="text-letra text-start text-gray-500 text-[15.6px]">
-                            {section.content}
+                            {section.contentEn}
                         </p>
                     </div>
                 </div>

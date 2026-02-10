@@ -9,34 +9,34 @@ const roomsImport = import.meta.glob("../../../content/galeria.md", { eager: tru
 const roomsData = Object.values(roomsImport) as any[];
 
 const sections: Section[] = roomsData[0]?.frontmatter?.fotos ?? [];
-
 ---
 
 <section class="w-full flex flex-col justify-center items-center mx-auto px-4 py-12">
-    <div>
-        <h1 class="title text-[50px]">Galeria</h1>
-    </div>
+   <div class="w-[70%] max-md:w-[90%]">
+        <div>
+            <h1 class="title text-[50px]  mb-8 font-bold">Galeria de Fotos</h1>
+        </div>
 
-    <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <button onclick="filtrar('todos')" class="btn-filtro active">Todos</button>
-        <button onclick="filtrar('hoteles')" class="btn-filtro">Hoteles</button>
-        <button onclick="filtrar('comida')" class="btn-filtro">Gastronomía</button>
-        <button onclick="filtrar('masajes')" class="btn-filtro">Masajes</button>
+        <div class="flex flex-wrap justify-start gap-4 mb-12">
+            <button onclick="filtrar('todos')" class="btn-filtro active">Todos</button>
+            <button onclick="filtrar('hoteles')" class="btn-filtro">Hoteles</button>
+            <button onclick="filtrar('comida')" class="btn-filtro">Gastronomía</button>
+            <button onclick="filtrar('masajes')" class="btn-filtro">Masajes</button>
+        </div>
     </div>
-
-    <div id="galeria-fotos" class="pt-[30px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center w-full max-w-7xl">
+    <div id="galeria-fotos" class="pt-[30px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 justify-items-center w-[90%] lg:w-[70%]">
         {
             sections.length > 0 ? (
                 sections.map((foto) => (
-                    <div class={`item-galeria ${foto.cat} group relative overflow-hidden rounded-2xl shadow-xl w-full max-w-[400px]`}>
+                    <div class={`item-galeria ${foto.cat} group relative overflow-hidden rounded-[12px] shadow-lg w-full aspect-square cursor-pointer`}>
                         <img 
                             src={foto.image} 
                             alt={foto.title} 
-                            class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                            class="img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             loading="lazy"
                         />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <p class="text-white font-bold text-xl">{foto.title}</p>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="bi bi-zoom-in text-white text-3xl"></i>
                         </div>
                     </div>
                 ))
@@ -45,6 +45,24 @@ const sections: Section[] = roomsData[0]?.frontmatter?.fotos ?? [];
             )
         }
     </div>
+
+    <dialog id="modal-galeria" class="backdrop:bg-black/95 p-0 border-none bg-transparent max-w-full max-h-full w-full h-full fixed inset-0 overflow-hidden">
+        <div class="flex flex-col items-center justify-center w-full h-full relative p-4">
+            <button onclick="document.getElementById('modal-galeria').close()" class="absolute top-6 right-6 text-white bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full w-12 h-12 flex items-center justify-center cursor-pointer text-4xl transition-all z-[60]">
+                &times;
+            </button>
+            
+            <div class="flex items-center justify-center max-w-6xl w-full h-[85vh] overflow-hidden">
+                <img 
+                    id="modal-img" 
+                    src="" 
+                    alt="" 
+                    class="max-w-full max-h-full object-contain rounded-md shadow-2xl transition-transform duration-300 cursor-zoom-in" 
+                    onclick="toggleZoom(this)"
+                />
+            </div>
+        </div>
+    </dialog>
 </section>
 
 <style>
@@ -55,31 +73,70 @@ const sections: Section[] = roomsData[0]?.frontmatter?.fotos ?? [];
     }
 
     .btn-filtro.active {
-        @apply bg-[#A71E1F] text-white shadow-lg shadow-[#A71E1F]/50;
+        @apply bg-[#A71E1F] text-white font-black shadow-lg shadow-[#A71E1F]/50;
     }
 
     .item-galeria {
-        display: block;
-        animation: fadeIn 0.4s ease forwards;
+        animation: slideUp 0.5s ease-out forwards;
     }
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.95); }
+    dialog[open] #modal-img {
+        animation: scaleIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .img-magnified {
+        transform: scale(1.5);
+        cursor: zoom-out !important;
+    }
+
+    body:has(dialog[open]) {
+        overflow: hidden;
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.7); }
         to { opacity: 1; transform: scale(1); }
     }
 </style>
 
 <script is:inline>
+    const modal = document.getElementById('modal-galeria');
+    const modalImg = document.getElementById('modal-img');
+
+    document.getElementById('galeria-fotos').addEventListener('click', function(e) {
+        const target = e.target.closest('.item-galeria');
+        if (target) {
+            const img = target.querySelector('img');
+            modalImg.src = img.src;
+            modalImg.classList.remove('img-magnified');
+            modal.showModal(); 
+        }
+    });
+
+    // Cerrar al hacer clic fuera
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.close();
+    });
+
+    // Función de Zoom al hacer clic en la imagen abierta
+    function toggleZoom(img) {
+        img.classList.toggle('img-magnified');
+    }
+
     function filtrar(categoria) {
         const items = document.querySelectorAll('.item-galeria');
         const botones = document.querySelectorAll('.btn-filtro');
 
         botones.forEach(btn => {
             btn.classList.remove('active');
-            if(btn.innerText.toLowerCase().includes(categoria.toLowerCase()) || 
-               (categoria === 'todos' && btn.innerText.toLowerCase() === 'todos')) {
-                btn.classList.add('active');
-            }
+            const btnText = btn.innerText.toLowerCase();
+            if (categoria === 'todos' && btnText === 'todos') btn.classList.add('active');
+            else if (categoria !== 'todos' && btnText.includes(categoria.toLowerCase())) btn.classList.add('active');
         });
 
         items.forEach(item => {

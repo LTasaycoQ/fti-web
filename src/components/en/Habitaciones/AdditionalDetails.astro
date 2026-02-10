@@ -6,8 +6,8 @@ import { roomsData } from "../../../content/RoomClasic/service";
 {
   roomsData.map((room) => {
     const half = Math.ceil(room.services.length / 2);
-    const col1 = room.services.slice(0, half);
-    const col2 = room.services.slice(half);
+    const col1 = room.servicesEN.slice(0, half);
+    const col2 = room.servicesEN.slice(half);
     return (
       <section class="mb-20 flex flex-col justify-center items-center text-center">
         <h2 class="text-gray-700 position__title title text-[1.8rem]">
@@ -41,8 +41,8 @@ import { roomsData } from "../../../content/RoomClasic/service";
 
         <h3 class="text-gray-700 text-[1.4rem] title">{room.titleService}</h3>
 
-        <div class="lista__detail text-[18px] flex flex-wrap gap-[40px] justify-center items-center">
-          <ul class="flex flex-col justify-center max-lg:w-[85%] items-start">
+        <div class="lista__detail text-[18px] flex max-md:flex-col gap-[40px] max-md:pl-[20px] ">
+          <ul class="flex text-start flex-col justify-center max-lg:w-[85%] items-start">
             {col1.map((item) => (
               <li class="flex gap-[10px] items-center justify-center text-gray-600">
                 <i class="text-[#9E2222] text-[18px] bi bi-check-lg" />
@@ -51,7 +51,7 @@ import { roomsData } from "../../../content/RoomClasic/service";
             ))}
           </ul>
 
-          <ul class=" flex flex-col justify-center max-lg:w-[85%] items-start">
+          <ul class=" flex flex-col text-start justify-center max-lg:w-[85%] items-start">
             {col2.map((item) => (
               <li class="flex gap-[10px] items-center justify-center text-gray-600">
                 <i class="text-[#9E2222] text-[18px] bi bi-check-lg" />

@@ -2,13 +2,15 @@
 import BaseLayout from "../../layouts/BaseLayoutEn.astro";
 import Fondos from "../../components/fondos.astro";
 import RoomFeatures from "../../components/en/Habitaciones/RoomFeatures.astro";
+import fondoImagen from "../../assets/backgrounds/ban2.webp";
 
-const title = "Habitaciones";
-const description = "Habitaciones Clásicas, Premium y Suites en Cusco. Con calefacción, Smart TV y WiFi. ¡Traslados de cortesía al aeropuerto incluidos!";
+
+const title = "Rooms";
+const description = "Classic, Premium Rooms and Suites in Cusco. Featuring heating, Smart TV, and WiFi. Complimentary airport transfers included!";
 ---
 
 <BaseLayout title={title} description={description}>
-    <Fondos imgFondo={`url(https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/ban2.jpg?fit=1573%2C600&ssl=1)`} />
+    <Fondos imgFondo={`url(${fondoImagen.src})`} />
     <main class="home">
         <RoomFeatures />
     </main>
