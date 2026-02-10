@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import pasadizVert from "../../../assets/images/pasadizo-vert.webp";
+
+---
+
+<section class="w-full flex justify-center items-center pt-[40px] flex-wrap">
+	<div class="w-[80%] max-lg:w-full flex justify-center items-center gap-[30px] max-md:flex-col p-[2em]">
+		<div class="flex flex-col justify-center items-start gap-[20px] max-md:items-center">
+			<h3 class="text-start title text-3xl">
+				A STAY AT TERRA ANDINA HOTEL PLACES YOU IN THE HEART OF CUSCO
+			</h3>
+
+			<a href="#" class="bg-[#B89738] rounded-[5px] text-white w-[170px] justify-center p-[10px] flex gap-[10px]">
+				<i class="bi bi-arrow-right"></i>
+				ABOUT US
+			</a>
+		</div>
+
+		<div class="hotel-intro__content">
+			<h2 class="title text-4xl">
+				TERRA ANDINA <br />
+				MANSION COLONIAL
+			</h2>
+
+			<p class="text-gray-700 text-[15px]">
+				A Colonial Mansion in the historic district of the former capital of the Inca Empire, Cusco, Peru. The Terra Andina is a First Class Hotel located half a block from the charming Plaza San Pedro, Eiffel’s designed San Pedro Market, San Pedro Church and only four blocks from the Main Square.
+			</p>
+
+			<ul class="text-[13px] text-gray-500 pt-[20px]">
+				<li class="flex gap-[10px] items-center">
+					<i class="text-red-800 bi bi-check-circle-fill"></i>
+				Is the perfect starting point to make your visit to Cusco and Machu Picchu an unforgettable experience
+				</li>
+				<li class="flex gap-[10px] items-center">
+					<i class="text-red-800 bi bi-check-circle-fill"></i>
+					Our friendly and professional staff awaits you to ensure a delightful stay.
+				</li>
+			</ul>
+		</div>
+
+		<div class="p-[10px] bg-white shadow-black shadow-2xl">
+			<Image loading="lazy" class="w-[52em]" src={pasadizVert} alt="pasadizo-terraAndinaHote"/>
+		</div>
+	</div>
+</section>

@@ -1,24 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../assets/logo/Logo-TAH-ENG.webp";
+import logo from "../../assets/logo/Logo-TAH-ENG.webp";
 ---
 
 <nav class="nav">
     <div class="menu-container w-[90%] max-sm:w-[90%]">
         <div class="nav__logo">
-            <a href="/" class="logo-link" aria-label="Volver al inicio">
+            <a href="/en" class="logo-link" aria-label="Volver al inicio">
                 <Image loading="eager" src={logo} alt="Logotipo de Terra Andina Colonial Mansion Hotel Cusco"/>
             </a>
         </div>
 
         <div class="max-lg:hidden">
             <ul class="flex gap-[40px] font-semibold text-[16px] text-white">
-                <li><a class="nav__link" href="/hotel">HOTEL</a></li>
-                <li><a class="nav__link" href="/habitaciones">HABITACIONES</a></li>
-                <li><a class="nav__link" href="/restaurantes">RESTAURANTES</a></li>
-                <li><a class="nav__link" href="/masajes">MASAJES</a></li>
-                <li><a class="nav__link" href="/galeria">GALERIA</a></li>
-                <li><a class="nav__link" href="/contacto">CONTACTO</a></li>
+                <li><a class="nav__link" href="/en/hotel">HOTEL</a></li>
+                <li><a class="nav__link" href="/en/habitaciones">ROOMS</a></li>
+                <li><a class="nav__link" href="/en/restaurantes">RESTAURANT</a></li>
+                <li><a class="nav__link" href="/en/masajes">MASSAGE</a></li>
+                <li><a class="nav__link" href="/en/galeria">GALLERY</a></li>
+                <li><a class="nav__link" href="/en/contacto">CONTACT</a></li>
             </ul>
         </div>
 
@@ -63,37 +63,37 @@ import logo from "../assets/logo/Logo-TAH-ENG.webp";
             <li class="w-full flex">
                 <a
                     class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
-                    href="/hotel">HOTEL</a
+                    href="/en/hotel">HOTEL</a
                 >
             </li>
             <li class="w-full flex">
                 <a
                     class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
-                    href="/habitaciones">HABITACIONES</a
+                    href="/en/habitaciones">ROOMS</a
                 >
             </li>
             <li class="w-full flex">
                 <a
                     class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
-                    href="/restaurantes">RESTAURANTE</a
+                    href="/en/restaurantes">RESTAURANT</a
                 >
             </li>
             <li class="w-full flex">
                 <a
                     class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
-                    href="/masajes">MASAJE</a
+                    href="/en/masajes">MASSAGE</a
                 >
             </li>
             <li class="w-full flex">
                 <a
                     class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
-                    href="/galeria">GALERIA</a
+                    href="/en/galeria">GALLERY</a
                 >
             </li>
             <li class="w-full flex">
                 <a
                     class="pl-[40px] w-full py-[10px] border-t-[1px] border-[#2D2828] bg-transparent hover:bg-[#3F444B]"
-                    href="/contacto">CONTACTO</a
+                    href="/en/contacto">CONTACT</a
                 >
             </li>
         </ul>

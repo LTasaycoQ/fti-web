@@ -5,7 +5,7 @@ interface Section {
     cat: string;
 }
 
-const roomsImport = import.meta.glob("../../content/galeria.md", { eager: true });
+const roomsImport = import.meta.glob("../../../content/galeria.md", { eager: true });
 const roomsData = Object.values(roomsImport) as any[];
 
 const sections: Section[] = roomsData[0]?.frontmatter?.fotos ?? [];

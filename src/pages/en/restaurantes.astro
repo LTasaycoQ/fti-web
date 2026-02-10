@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayoutEn.astro"
+import Fondos from "../../components/fondos.astro"
+
+import RestauranteInicio from "../../components/en/Restaurantes/RestaurantInicio.astro"
+import GastronomicExperience from "../../components/en/Restaurantes/GastronomicExperience.astro"
+import fondoImagen from "../../assets/backgrounds/interra-intro.webp"
+
+
+const title = "Restaurante";
+const description = "Disfruta de una experiencia gastronómica única en el corazón de Cusco. Saborea lo mejor de la cocina peruana e internacional en un ambiente colonial inolvidable.";
+---
+
+<BaseLayout title={title} description={description}>
+
+    <Fondos imgFondo={`url(${fondoImagen.src})`} />
+    <main>
+
+        <RestauranteInicio />
+        <GastronomicExperience />
+    </main>
+
+</BaseLayout>
+

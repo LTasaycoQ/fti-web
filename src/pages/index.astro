@@ -12,15 +12,15 @@ import fondoImagen from "../assets/backgrounds/baner-terra.webp";
 
 const title = "Inicio"
 const description = "Disfruta de Terra Andina Colonial Mansion, hotel boutique en el corazón de Cusco. Lujo colonial, confort moderno y una ubicación inmejorable.";
+const lang = "en";
 ---
 
-<BaseLayout title={title} description={description}>
+
+<BaseLayout lang={lang} title={title} description={description}>
     <Fondos imgFondo={`url(${fondoImagen.src})`} />
 
     <main class="home">
-
         <FormReserva/>
-
         <HistoricCenter />
         <AndeandLand />
         <Rooms />

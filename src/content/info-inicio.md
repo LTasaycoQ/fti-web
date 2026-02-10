@@ -2,101 +2,121 @@
 sections:
     - image: "/images/loc-hotel.webp"
       alt: "icon-ubicacion"
-      text: "Ubicado en el centro Histórico de Cusco"
+      text: "Excelente ubicación"
+      textEn: "Excellent location"
 
 
     - image: "/images/51-rooms.webp"
       alt: "icon-rooms"
-      text: "Ubicado en el centro Historico de Cusco"
+      text: "51 habitaciones"
+      textEn: "51 rooms"
 
 
     - image: "/images/24hras.webp"
       alt: "icon-24hras"
-      text: "51 Habitaciones equipadas"
+      text: "Recepcion 24 Hrs"
+      textEn: "24 hours hotel reception"
 
 
     - image: "/images/caja-seguridad.webp"
       alt: "icon-caja"
-      text: "Múltiples opciones de pago"
+      text: "caja de seguridad"
+      textEn: "Safe deposit box"
 
 
     - image: "/images/equipaje-almacenamiento.webp"
       alt: "icon-almacenamiento"
-      text: "Check-in 12:00 m"
+      text: "Almacenamiento de equipaje"
+      textEn: "Storage"
 
 
     - image: "/images/impresora-tarjeta.webp"
       alt: "icon-tarjeta"
-      text: "Check-out 10:00 a.m."
+      text: "Impresión de Tarjeta de embarque"
+      textEn: "Boarding pass printer"
    
 
     - image: "/images/exchange.webp"
       alt: "icon-exchange"
-      text: "51 Habitaciones equipadas"
+      text: "Cambio de moneda"
+      textEn: "Money Exchange"
 
 
     - image: "/images/wifi-free.webp"
       alt: "icon-wifi"
-      text: "Múltiples opciones de pago"
+      text: "WiFi gratuito"
+      textEn: "Free Wi Fi"
 
 
     - image: "/images/phone.webp"
       alt: "icon-phone"
-      text: "Check-in 12:00 m"
+      text: "Teléfono"
+      textEn: "Telephone"
 
 
     - image: "/images/internet.webp"
       alt: "icon-internet"
-      text: "Check-out 10:00 a.m."
+      text: "Internet"
+      textEn: "Internet center"
    
 
     - image: "/images/calefaccion.webp"
       alt: "icon-calefaccion"
-      text: "51 Habitaciones equipadas"
+      text: "Calefacción"
+      textEn: "Heating"
 
 
     - image: "/images/asist-medic.webp"
       alt: "icon-asist-medic"
-      text: "Múltiples opciones de pago"
+      text: "Asistencia Médica (costo extra)"
+      textEn: "Medical service (extra cost)"
 
 
     - image: "/images/restaurant.webp"
       alt: "icon-restaurant"
-      text: "Check-in 12:00 m"
+      text: "Restaurante"
+      textEn: "Restaurant"
 
 
     - image: "/images/cafe.webp"
       alt: "icon-cafe"
-      text: "Check-out 10:00 a.m."
+      text: "Cafetería"
+      textEn: "Coffee shop"
         
     - image: "/images/desayuno-buffet.webp"
       alt: "icon-desayuno-buffet"
-      text: "51 Habitaciones equipadas"
+      text: "Desayuno buffet"
+      textEn: "Buffet breakfast"
 
 
     - image: "/images/masajes.webp"
       alt: "mensajes"
-      text: "Múltiples opciones de pago"
+      text: "Masajes (costo extra)"
+      textEn: "Massages (extra cost)"
 
 
     - image: "/images/bar-icon.webp"
       alt: "bar"
-      text: "Check-in 12:00 m"
+      text: "Bar"
+      textEn: "Bar"
 
 
     - image: "/images/lavanderia.webp"
       alt: "icon-lavanderia"
-      text: "Check-out 10:00 a.m."
+      text: "Lavandería (consto extra)"
+      textEn: "Laundry (extra cost)"
    
 
 
     - image: "/images/roo-service.webp"
       alt: "icon-habitaciones"
       text: "Servicio a la habitación"
+      textEn: "Room service"
 
 
     - image: "/images/service-transport.webp"
       alt: "icon-card"
       text: "Servicio de transporte (costo extra)"
+      textEn: "Shuttle service (extra cost)"
 
 ---

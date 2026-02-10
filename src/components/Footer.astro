@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import logoTah from "../assets/logo/Logo-TAH-ENG.webp"
-
+import visa from "../assets/logo/visa.webp"
 ---
 
 <footer class="footer w-full flex justify-center items-center bottom-0">
@@ -83,9 +83,8 @@ import logoTah from "../assets/logo/Logo-TAH-ENG.webp"
 				Payment Options
 			</span>
 			<div class="text-gray-400 flex justify-start items-center gap-[15px] mt-4">
-				<img src="https://img.icons8.com/color/512/visa.png" alt="img-visa" class="w-[53px]" />
-				<svg
-					fill="#405e5b"
+				<Image src={visa} loading="eager" class="w-[53px]" alt="icono visa"/>
+				<svg fill="#405e5b"
 					width="50px"
 					class="relative top-[10px]"
 					viewBox="0 0 36.00 36.00"
@@ -139,13 +138,11 @@ import logoTah from "../assets/logo/Logo-TAH-ENG.webp"
 				>
 			</div>
 
-			<span class="title-footer pt-[20px]"
-				>Comparte tus comentarios</span
-			>
+			<span class="title-footer pt-[20px]">Comparte tus comentarios</span>
 			<p class=" flex justify-start items-center gap-[10px]">
 				
 				<a href="https://www.facebook.com/TerraAndinaColonialMansion/" target="_blank" rel="noopener noreferrer" class="cursor-pointer  text-gray-400 hover:text-blue-400 text-[25px] font-bold rounded-full p-[3px] pr-[12px] pl-[12px]"><i class="bi bi-facebook"></i></a>
-				<a href="https://www.facebook.com/TerraAndinaColonialMansion/" target="_blank" rel="noopener noreferrer" class="cursor-pointer  text-gray-400 hover:text-pink-400 text-[25px] font-bold rounded-full p-[3px] pr-[12px] pl-[12px]"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.instagram.com/terraandina_hotel_cusco/" target="_blank" rel="noopener noreferrer" class="cursor-pointer  text-gray-400 hover:text-pink-400 text-[25px] font-bold rounded-full p-[3px] pr-[12px] pl-[12px]"><i class="bi bi-instagram"></i></a>
 
 			</p>
 		</div>
