@@ -18,10 +18,11 @@ const sections = frontmatter.sections as Section[];
 <div class="card-container max-md:grid-cols-2 max-sm:grid-cols-1  grid grid-cols-3 justify-center items-center gap-[10px] flex-wrap p-[40px]">
     {
         sections.map((section) => (
-            <div class="border-[1px] max-sm:h-full max-lg:h-[23em] max-md:w-[100%]  border-gray-300 p-[10px]">
+            <div class="border-[1px] max-sm:h-full max-lg:h-[23em] max-md:w-[100%]  border-gray-300 p-[15px]">
                 <div>
                     <img
-                        class="imagen-card"
+
+                        class="w-[400px]"
                         src={section.image}
                         alt={section.alt}
                     />
@@ -31,15 +32,15 @@ const sections = frontmatter.sections as Section[];
 
                     <div>
                         <ul class="flex flex-col gap-[10px] pt-[10px] text-gray-600">
-                            <li class="items">
+                            <li class="items flex items-center gap-[15px]">
                                 <i class="text-[#F7A40F] icon-card bi bi-people-fill" />
                                 {section.people} Personas
                             </li>
-                            <li class="items">
+                           <li class="items flex items-center gap-[15px]">
                                 <i class=" text-[#F7A40F] icon-card bi bi-textarea-resize" /> 
                                 {section.area}
                             </li>
-                            <li class="items">
+                          <li class="items flex items-center gap-[15px]">
                                 <i class="text-[#F7A40F]  icon-card bi bi-truck-flatbed" /> 
                                 {section.bed} 
                             </li>
