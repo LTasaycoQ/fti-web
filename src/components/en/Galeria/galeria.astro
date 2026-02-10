@@ -14,10 +14,10 @@ const sections: Section[] = roomsData[0]?.frontmatter?.fotos ?? [];
 <section class="w-full flex flex-col justify-center items-center mx-auto px-4 py-12">
    <div class="w-[70%] max-md:w-[90%]">
         <div>
-            <h1 class="title text-[50px]  mb-8 font-bold">Galeria de Fotos</h1>
+             <h1 class=" text-[55px] text-gray-700 mb-8 font-bold">Galeria de Fotos</h1>        
         </div>
 
-        <div class="flex flex-wrap justify-start gap-4 mb-12">
+        <div class="flex flex-wrap hidden justify-start gap-4 mb-12">
             <button onclick="filtrar('todos')" class="btn-filtro active">Todos</button>
             <button onclick="filtrar('hoteles')" class="btn-filtro">Hoteles</button>
             <button onclick="filtrar('comida')" class="btn-filtro">Gastronomía</button>
