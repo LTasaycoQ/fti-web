@@ -2,9 +2,9 @@ export const roomsData = [
   {
     title: "HABITACION CLASICA",
     images: [
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Clasica-mat-1.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Clasica-bano-1.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/clasica-doble-1.webp?fit=500%2C333&ssl=1",
+      "/images/rooms/Clasica-mat-1.webp",
+      "/images/rooms/Clasica-bano-1.webp",
+      "/images/rooms/clasica-doble-1.webp",
     ],
     services: [
     ],
@@ -13,12 +13,14 @@ export const roomsData = [
     title: "HABITACION PREMIUM",
     titleService: "SERVICIOS ADICIONALES",
     images: [
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Premium-Triple-1.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/premium-matrimonial-1.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Premium-triple-bano.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Premium-familiar-1.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Premium-familiar-bano1-1.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Premium-bano-1.jpg?fit=500%2C333&ssl=1",
+      "/images/rooms/premium-matrimonial-1.webp",
+      "/images/rooms/Premium-Triple-1.webp",
+      "/images/rooms/Premium-familiar-1.webp",
+      "/images/rooms/Premium-familiar-bano1-1.webp",
+      "/images/rooms/Premium-bano-1.webp",
+      "/images/rooms/Ameneties-premium.webp",
+      "/images/rooms/Premium-triple1.webp",
+      "/images/rooms/Premium-twin.webp",
     ],
     services: [
       "Espejo de aumento para maquillarse o afeitarse",
@@ -45,11 +47,11 @@ export const roomsData = [
     titleService: "SERVICIOS ADICIONALES",
 
     images: [
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Junior-Suite3.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Junior-Suite-bano2.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Junior-Suite2.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Junior-Suite1.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Junior-Suite-bano1.webp?fit=500%2C333&ssl=1",
+      "/images/rooms/Ameneties-premium.webp",
+      "/images/rooms/Junior-Suite2.webp",
+      "/images/rooms/Junior-Suite1.webp",
+      "/images/rooms/Junior-Suite-bano1.webp",
+      "/images/rooms/Junior-Suite-bano2.webp",
     ],
     services: [
       "Espejo de aumento para maquillarse o afeitarse",
@@ -76,15 +78,15 @@ export const roomsData = [
     titleService: "SERVICIOS ADICIONALES",
 
     images: [
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Suite10.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/suite6.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Suite-1-1.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Suite2.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Suite3.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/suite4.webp?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/suite5.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Suite7.jpg?fit=500%2C333&ssl=1",
-      "https://i0.wp.com/terraandinahotel.com/wp-content/uploads/2025/12/Suite9.webp?fit=500%2C333&ssl=1",
+      "/images/rooms/Ameneties-premium.webp",
+      "/images/rooms/Suite10.webp",
+      "/images/rooms/Suite-1-1.webp",
+      "/images/rooms/Suite2.webp",
+      "/images/rooms/Suite3.webp",
+      "/images/rooms/suite4.webp",
+      "/images/rooms/suite5.webp",
+      "/images/rooms/Suite7.webp",
+      "/images/rooms/Suite9.webp",
     ],
    services: [
       "Espejo de aumento para maquillarse o afeitarse",
