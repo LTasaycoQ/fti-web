@@ -1,20 +1,85 @@
 ---
-
+const fotos = [
+  { img: "https://picsum.photos/600/500?random=1", cat: "hoteles", titulo: "Suite Lujo" },
+  { img: "https://picsum.photos/600/500?random=2", cat: "hoteles", titulo: "Piscina" },
+  { img: "https://picsum.photos/600/500?random=3", cat: "comida", titulo: "Ceviche" },
+  { img: "https://picsum.photos/600/500?random=4", cat: "masajes", titulo: "Spa Relax" },
+];
 ---
 
-<section>
-    <h1 class="text-center text-4xl font-bold text-gray-800 pt-[40px]">
-        Galeria
-    </h1>
+<section class="w-full flex flex-col justify-center items-center mx-auto px-4 py-12">
 
-    <div class=" w-full flex jutify-center items-center pt-[20px]">
-        <div class="w-full flex items-center justify-center gap-[30px]">
-            <a href="#" class="bg-white border-[2px] hover:bg-[#A71E1F] hover:text-white border-[#A71E1F] rounded-[5px] p-[10px]">1 Hoteles</a>
-            <a href="#" class="bg-white border-[2px] hover:bg-[#A71E1F] hover:text-white border-[#A71E1F] rounded-[5px] p-[10px]">1 Comida</a>
-            <a href="#" class="bg-white border-[2px] hover:bg-[#A71E1F] hover:text-white border-[#A71E1F] rounded-[5px] p-[10px]">1 Masajes</a>
-            <a href="#" class="bg-white border-[2px] hover:bg-[#A71E1F] hover:text-white border-[#A71E1F] rounded-[5px] p-[10px]">1 Hoteles</a>
-        </div>
+    <div>
+        <h1 class="title text-[50px]">Galeria</h1>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button onclick="filtrar('todos')" class="btn-filtro active">Todos</button>
+        <button onclick="filtrar('hoteles')" class="btn-filtro">Hoteles</button>
+        <button onclick="filtrar('comida')" class="btn-filtro">Gastronomía</button>
+        <button onclick="filtrar('masajes')" class="btn-filtro">Masajes</button>
+    </div>
+
+    <div id="galeria-fotos" class="pt-[30px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center w-full max-w-7xl">
+        {
+            fotos.map((foto) => (
+                <div class={`item-galeria ${foto.cat} group relative overflow-hidden rounded-2xl shadow-xl w-full max-w-[400px]`}>
+                    <img 
+                        src={foto.img} 
+                        alt={foto.titulo} 
+                        class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-bold text-xl">{foto.titulo}</p>
+                    </div>
+                </div>
+            ))
+        }
     </div>
 </section>
 
-<script type="module"></script>
+<style>
+    @reference "tailwindcss";
+
+    .btn-filtro {
+        @apply px-6 py-2 border-2 border-[#A71E1F] text-[#A71E1F] font-bold rounded-full transition-all duration-300 cursor-pointer;
+    }
+
+    .btn-filtro.active {
+        @apply bg-[#A71E1F] text-white shadow-lg shadow-[#A71E1F]/50;
+    }
+
+    .item-galeria {
+        display: block;
+        animation: fadeIn 0.4s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+</style>
+
+<script is:inline>
+    function filtrar(categoria) {
+        const items = document.querySelectorAll('.item-galeria');
+        const botones = document.querySelectorAll('.btn-filtro');
+
+        botones.forEach(btn => {
+            btn.classList.remove('active');
+            if(btn.innerText.toLowerCase().includes(categoria.toLowerCase()) || 
+               (categoria === 'todos' && btn.innerText.toLowerCase() === 'todos')) {
+                btn.classList.add('active');
+            }
+        });
+
+        items.forEach(item => {
+            if (categoria === 'todos' || item.classList.contains(categoria)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
