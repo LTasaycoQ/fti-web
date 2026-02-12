@@ -1,6 +1,11 @@
 <?php
 header("Content-Type: application/json");
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . "/vendor/autoload.php";
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     echo json_encode([
         "ok" => false,
@@ -9,9 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
+// Leer JSON del body
 $data = json_decode(file_get_contents("php://input"), true);
 
-// O si usas form-data, puedes usar $_POST directo
 $nombre  = htmlspecialchars($data["nombre"] ?? "");
 $email   = htmlspecialchars($data["email"] ?? "");
 $asunto  = htmlspecialchars($data["asunto"] ?? "");
@@ -25,26 +30,62 @@ if (!$nombre || !$email || !$asunto || !$mensaje) {
     exit;
 }
 
-$destinatario = "luistasayco3030@gmail.com"; // CAMBIA ESTO
+$mail = new PHPMailer(true);
 
-$cabeceras = "From: $email\r\n";
-$cabeceras .= "Reply-To: $email\r\n";
-$cabeceras .= "Content-Type: text/plain; charset=UTF-8\r\n";
+try {
+    // Configuración SMTP
+    $mail->isSMTP();
+    $mail->Host       = "smtp.gmail.com";
+    $mail->SMTPAuth   = true;
+    $mail->Username   = "luistasayco3030@gmail.com";   // TU GMAIL
+    $mail->Password   = "ukvsnclrgycsxhrh";            // TU APP PASSWORD
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
 
-$contenido  = "Nombre: $nombre\n";
-$contenido .= "Email: $email\n\n";
-$contenido .= "Mensaje:\n$mensaje";
+    // =========================
+    // 1) CORREO PARA TI
+    // =========================
+    $mail->setFrom("luistasayco3030@gmail.com", "Mi Web");
+    $mail->addAddress("luistasayco3030@gmail.com"); // donde recibes
+    $mail->addReplyTo($email, $nombre); // para responder al usuario
 
-$enviado = mail($destinatario, $asunto, $contenido, $cabeceras);
+    $mail->isHTML(false);
+    $mail->Subject = $asunto;
+    $mail->Body =
+        "Nombre: $nombre\n" .
+        "Email: $email\n\n" .
+        "Mensaje:\n$mensaje";
 
-if ($enviado) {
+    $mail->send();
+
+    // =========================
+    // 2) CORREO DE CONFIRMACIÓN AL USUARIO
+    // =========================
+    $mail->clearAddresses();
+    $mail->clearReplyTos();
+
+    $mail->setFrom("luistasayco3030@gmail.com", "Mi Web");
+    $mail->addAddress($email, $nombre);
+
+    $mail->Subject = "Hemos recibido tu mensaje";
+    $mail->Body =
+        "Hola $nombre,\n\n" .
+        "Gracias por contactarnos. Hemos recibido tu mensaje correctamente y te responderemos lo antes posible.\n\n" .
+        "Resumen de tu mensaje:\n" .
+        "Asunto: $asunto\n\n" .
+        "$mensaje\n\n" .
+        "Saludos,\nMi Web";
+
+    $mail->send();
+
     echo json_encode([
         "ok" => true,
-        "message" => "Mensaje enviado correctamente"
+        "message" => "Mensaje enviado y confirmación enviada al usuario"
     ]);
-} else {
+} catch (Exception $e) {
     echo json_encode([
         "ok" => false,
-        "error" => "No se pudo enviar el correo"
+        "error" => "No se pudo enviar el correo",
+        "detail" => $mail->ErrorInfo
     ]);
 }
