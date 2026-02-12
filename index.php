@@ -51,13 +51,13 @@ function crearMailer() {
 try {
     $mail1 = crearMailer();
 
-    $mail1->setFrom("terraAndina@gmail.com", "Formulario TerraAndina");
+    $mail1->setFrom("no-reply@gmail.com", "Formulario TerraAndina");
 
     $mail1->addReplyTo($email, $nombre);
 
-    $mail1->addAddress("dw@fiestatoursperu.com");
+    $mail1->addAddress("ventas@TerraAndinaHotel.com");
 
-    $mail1->Subject = "Consulta Web - Terra Andina Mansion Colonial (" . date("H:i:s") . ")";
+    $mail1->Subject = "Consulta WEB - Terra Andina Mansion Colonial (" . date("H:i:s") . ")";
 
 
     $mail1->Body =
@@ -73,7 +73,7 @@ try {
 
     $mail2 = crearMailer();
 
-    $mail2->setFrom("luistasayco3030@gmail.com", "Formulario TerraAndina");
+    $mail2->setFrom("no-reply@gmail.com", "Formulario TerraAndina");
     $mail2->addAddress($email, $nombre);
 
     $mail2->Subject = "Hemos recibido tu consulta";
