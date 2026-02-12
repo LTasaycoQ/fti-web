@@ -55,7 +55,7 @@ try {
 
     $mail1->addReplyTo($email, $nombre);
 
-    $mail1->addAddress("luis.tasayco@vallegrande.edu.pe");
+    $mail1->addAddress("dw@fiestatoursperu.com");
 
     $mail1->Subject = "Consulta Web - Terra Andina Mansion Colonial (" . date("H:i:s") . ")";
 
