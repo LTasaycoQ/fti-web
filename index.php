@@ -40,8 +40,8 @@ function crearMailer() {
     $mail->isSMTP();
     $mail->Host       = "smtp.gmail.com";
     $mail->SMTPAuth   = true;
-    $mail->Username   = "luistasayco3030@gmail.com";
-    $mail->Password   = "ukvsnclrgycsxhrh";   
+    $mail->Username   = "noreply.terraandina@gmail.com";
+    $mail->Password   = "vvkhjkzcvozmjbji";   
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
     $mail->isHTML(false);
@@ -51,11 +51,11 @@ function crearMailer() {
 try {
     $mail1 = crearMailer();
 
-    $mail1->setFrom("no-reply@gmail.com", "Formulario TerraAndina");
+    $mail1->setFrom("noreply.terraandina@gmail.com", "Formulario TerraAndina");
 
     $mail1->addReplyTo($email, $nombre);
 
-    $mail1->addAddress("luistasayco3030@gmail.com");
+    $mail1->addAddress("ventas@terraandinahotel.com");
 
     $mail1->Subject = "Consulta WEB - Terra Andina Mansion Colonial (" . date("H:i:s") . ")";
 
