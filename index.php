@@ -48,8 +48,6 @@ function crearMailer() {
     return $mail;
 }
 
-// ventas@terraandinahotel.com
-
 try {
     $mail1 = crearMailer();
 
@@ -57,7 +55,7 @@ try {
 
     $mail1->addReplyTo($email, $nombre);
 
-    $mail1->addAddress("luistasayco3030@gmail.com");
+    $mail1->addAddress("ventas@terraandinahotel.com");
 
     $mail1->Subject = "Consulta WEB - Terra Andina Mansion Colonial (" . date("H:i:s") . ")";
 
