@@ -85,6 +85,7 @@ try {
         "— TerraAndina Hotel";
 
     $mail2->send();
+    
 
     echo json_encode([
         "ok" => true,
